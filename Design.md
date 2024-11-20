@@ -2,7 +2,7 @@
 classDiagram
 class HandGesture {
   <<interface>>
-  +getHandGesture()
+  beats(HandGesture other) boolean
 }
 
 class Rock {
@@ -44,7 +44,7 @@ Game -- Player
 Game -- ComputerPlayer
 
 class Rules {
-  +determineWinner(Player1: Player, Player2: Player) Player
+  +determineWinner(Player1: Player, Player2: Player)
 }
 
 Rules -- Game
