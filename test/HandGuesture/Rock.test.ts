@@ -30,4 +30,12 @@ describe('Rock Class Under Test', () => {
 
     expect(actual).toBe(expected)
   })
+
+  test('Rock Beats Rock', () => {
+    const sut = getSUT()
+    const actual = sut.beats(sut)
+    const expected = false
+
+    expect(actual).toBe(expected)
+  })
 })
