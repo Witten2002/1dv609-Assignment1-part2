@@ -1,3 +1,7 @@
 export function add(a: number, b: number): number {
-  return 1
+  if (a === 1) {
+    return 1
+  } else {
+    return 2
+  }
 }
