@@ -1,4 +1,5 @@
-import { HandGuesture } from './HandGesture.js'
+import { HandGuesture } from './HandGesture.ts'
+import { Paper } from './Paper.ts'
 
 class Rock implements HandGuesture {
   /**
@@ -8,7 +9,11 @@ class Rock implements HandGuesture {
    * @returns {boolen} If this HandGuesture can bean the argument Guesture,
    */
   beats(handGesture: HandGuesture) {
-    return false
+    if (handGesture instanceof Paper) {
+      return false
+    } else {
+      return true
+    }
   }
 }
 
