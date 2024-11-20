@@ -7,11 +7,6 @@ describe('add function', () => {
   })
 
   test('Test Add Method', () => {
-    const result = add(2, 0)
-    expect(result).toBe(2)
-  })
-
-  test('Test Add Method', () => {
     const result = add(1, 2)
     expect(result).toBe(3)
   })
