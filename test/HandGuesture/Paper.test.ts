@@ -30,4 +30,12 @@ describe('Paper class under test', () => {
 
     expect(actual).toBe(expected)
   })
+
+  test('Paper Beats Paper', () => {
+    const sut = getSUT()
+    const actual = sut.beats(getSUT())
+    const expected = false
+
+    expect(actual).toBe(expected)
+  })
 })
