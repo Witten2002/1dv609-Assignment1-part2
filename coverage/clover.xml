@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1732124797075" clover="3.2.0">
-  <project timestamp="1732124797075" name="All files">
+<coverage generated="1732124887553" clover="3.2.0">
+  <project timestamp="1732124887553" name="All files">
     <metrics statements="12" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="2" elements="17" coveredelements="15" complexity="0" loc="12" ncloc="12" packages="1" files="3" classes="3"/>
     <file name="Paper.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\HandGesture\Paper.ts">
       <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>

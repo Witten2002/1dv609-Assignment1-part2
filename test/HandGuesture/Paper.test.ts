@@ -15,26 +15,30 @@ describe('Paper class under test', () => {
     return new Rock()
   }
 
-  test('Paper Beats Scissors', () => {
+  const setUpTest = (param) => {
     const sut = getSUT()
-    const actual = sut.beats(getScissor())
+    const actual = sut.beats(param)
+
+    return actual
+  }
+
+  test('Paper Beats Scissors', () => {
     const expected = false
+    const actual = setUpTest(getScissor())
 
     expect(actual).toBe(expected)
   })
 
   test('Paper Beats Rock', () => {
-    const sut = getSUT()
-    const actual = sut.beats(getRock())
     const expected = true
+    const actual = setUpTest(getRock())
 
     expect(actual).toBe(expected)
   })
 
   test('Paper Beats Paper', () => {
-    const sut = getSUT()
-    const actual = sut.beats(getSUT())
     const expected = false
+    const actual = setUpTest(getSUT())
 
     expect(actual).toBe(expected)
   })
