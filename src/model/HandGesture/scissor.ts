@@ -8,7 +8,7 @@ class Scissor implements HandGuesture {
    * @returns {boolen} If this HandGuesture can bean the argument Guesture,
    */
   beats(handGesture: HandGuesture) {
-    return false
+    return true
   }
 }
 

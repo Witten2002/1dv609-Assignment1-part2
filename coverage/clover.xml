@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1732123371365" clover="3.2.0">
-  <project timestamp="1732123371365" name="All files">
-    <metrics statements="9" coveredstatements="7" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="1" elements="13" coveredelements="9" complexity="0" loc="9" ncloc="9" packages="1" files="3" classes="3"/>
+<coverage generated="1732123859392" clover="3.2.0">
+  <project timestamp="1732123859392" name="All files">
+    <metrics statements="9" coveredstatements="8" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="2" elements="13" coveredelements="11" complexity="0" loc="9" ncloc="9" packages="1" files="3" classes="3"/>
     <file name="Paper.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\HandGesture\Paper.ts">
-      <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <line num="11" count="0" type="stmt"/>
-      <line num="15" count="1" type="stmt"/>
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="15" count="2" type="stmt"/>
     </file>
     <file name="Rock.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\HandGesture\Rock.ts">
       <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
@@ -18,7 +18,7 @@
     <file name="Scissor.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\HandGesture\Scissor.ts">
       <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <line num="11" count="0" type="stmt"/>
-      <line num="15" count="1" type="stmt"/>
+      <line num="15" count="2" type="stmt"/>
     </file>
   </project>
 </coverage>
