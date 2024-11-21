@@ -6,11 +6,17 @@ import { Paper } from './HandGesture/Paper.ts'
 
 class Rules {
   deternimateWinner(player: Player, computerPlayer: ComputerPlayer) {
+    if (player.getHandGuesture() instanceof Rock && computerPlayer.getHandGuesture() instanceof Rock) {
+      return GameResult.TIE
+    }
+
     if (player.getHandGuesture() instanceof Rock || player.getHandGuesture() instanceof Paper) {
       return GameResult.PLAYER
     }
 
-    return GameResult.COMPUTER
+    if (computerPlayer.getHandGuesture() instanceof Rock) {
+      return GameResult.COMPUTER
+    }
   }
 }
 
