@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1732193843339" clover="3.2.0">
-  <project timestamp="1732193843339" name="All files">
-    <metrics statements="36" coveredstatements="36" conditionals="10" coveredconditionals="10" methods="7" coveredmethods="7" elements="53" coveredelements="53" complexity="0" loc="36" ncloc="36" packages="4" files="6" classes="6"/>
+<coverage generated="1732193961072" clover="3.2.0">
+  <project timestamp="1732193961072" name="All files">
+    <metrics statements="38" coveredstatements="38" conditionals="12" coveredconditionals="12" methods="7" coveredmethods="7" elements="57" coveredelements="57" complexity="0" loc="38" ncloc="38" packages="4" files="6" classes="6"/>
     <package name="model">
       <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
       <file name="Player.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\Player.ts">
@@ -19,16 +19,18 @@
       </file>
     </package>
     <package name="model.Factory">
-      <metrics statements="7" coveredstatements="7" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <metrics statements="9" coveredstatements="9" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
       <file name="HandGuestureFactory.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\Factory\HandGuestureFactory.ts">
-        <metrics statements="7" coveredstatements="7" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <metrics statements="9" coveredstatements="9" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="8" count="3" type="cond" truecount="1" falsecount="0"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="12" count="2" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="9" count="3" type="cond" truecount="3" falsecount="0"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
       </file>
     </package>
     <package name="model.HandGesture">
