@@ -1,5 +1,4 @@
 import { ComputerPlayer } from '../src/model/ComputerPlayer'
-import { UserChoice } from '../src/model/enums/UserChoice'
 import { Paper } from '../src/model/HandGesture/Paper'
 import { Rock } from '../src/model/HandGesture/Rock'
 import { Scissor } from '../src/model/HandGesture/Scissor'
