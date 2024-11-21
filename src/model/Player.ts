@@ -1,19 +1,17 @@
 import { HandGuesture } from './HandGesture/HandGesture.ts'
-import { Rock } from './HandGesture/Rock.ts'
-import { Paper } from './HandGesture/Paper.ts'
-import { Scissor } from './HandGesture/Scissor.ts'
+import { HandGestureFactory } from './Factory/HandGuestureFactory.ts'
+import { UserChoice } from './enums/UserChoice.ts'
 
 class Player {
   #handGuesutre: HandGuesture
+  #factory: HandGestureFactory
 
-  setHandGuesture(handGuesture: HandGuesture) {
-    if (handGuesture instanceof Rock) {
-      this.#handGuesutre = new Rock()
-    } else if (handGuesture instanceof Paper) {
-      this.#handGuesutre = new Paper()
-    } else {
-      this.#handGuesutre = new Scissor()
-    }
+  constructor() {
+    this.#factory = new HandGestureFactory()
+  }
+
+  setHandGuesture(userChoice: UserChoice) {
+    this.#handGuesutre = this.#factory.createHandGuesture(userChoice)
   }
 
   getHandGuesture(): HandGuesture {
