@@ -4,7 +4,7 @@ import { GameResult } from './enums/GameResult.ts'
 
 class Rules {
   deternimateWinner(player: Player, computerPlayer: ComputerPlayer) {
-    return GameResult.TIE
+    return GameResult.PLAYER
   }
 }
 
