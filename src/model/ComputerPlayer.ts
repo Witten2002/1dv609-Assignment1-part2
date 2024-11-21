@@ -8,7 +8,7 @@ class ComputerPlayer extends Player {
   }
 
   generateRandomHandGesture(): HandGuesture {
-    return new Rock()
+    return 
   }
 }
 
