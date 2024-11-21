@@ -17,6 +17,7 @@ class Rules {
     } else {
       return GameResult.TIE
     }
+    
   }
 }
 
