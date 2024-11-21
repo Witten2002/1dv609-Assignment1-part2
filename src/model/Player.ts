@@ -5,7 +5,7 @@ class Player {
   #handGuesutre
 
   setHandGuesture(handGuesture: HandGuesture) {
-    this.#handGuesutre
+    this.#handGuesutre = new Rock()
   }
 
   getHandGuesture(): HandGuesture {
