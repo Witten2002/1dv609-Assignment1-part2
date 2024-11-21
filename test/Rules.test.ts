@@ -15,6 +15,17 @@ describe('Rules Under Test', () => {
     computerPlayer = new ComputerPlayer()
   })
 
+  test('Test Its a Tie! Computer: Rock. Player: Rock', () => {
+    player.setHandGuesture(UserChoice.ROCK)
+    computerPlayer.setHandGuesture(UserChoice.ROCK)
+
+    const actual = sut.deternimateWinner(player, computerPlayer)
+
+    const expected = GameResult.TIE
+
+    expect(actual).toBe(expected)
+  })
+
   test('Test Player wins with a Rock. Computer: Scissor', () => {
     player.setHandGuesture(UserChoice.ROCK)
     computerPlayer.setHandGuesture(UserChoice.SCISSOR)
@@ -22,6 +33,17 @@ describe('Rules Under Test', () => {
     const actual = sut.deternimateWinner(player, computerPlayer)
 
     const expected = GameResult.PLAYER
+
+    expect(actual).toBe(expected)
+  })
+
+  test('Test Player loses with a Rock. Computer: Paper', () => {
+    player.setHandGuesture(UserChoice.ROCK)
+    computerPlayer.setHandGuesture(UserChoice.PAPER)
+
+    const actual = sut.deternimateWinner(player, computerPlayer)
+
+    const expected = GameResult.COMPUTER
 
     expect(actual).toBe(expected)
   })
@@ -37,6 +59,18 @@ describe('Rules Under Test', () => {
     expect(actual).toBe(expected)
   })
 
+  test('Test Player Win with Scissor! Computer: Paper', () => {
+    player.setHandGuesture(UserChoice.ROCK)
+    computerPlayer.setHandGuesture(UserChoice.ROCK)
+
+    const actual = sut.deternimateWinner(player, computerPlayer)
+
+    const expected = GameResult.TIE
+
+    expect(actual).toBe(expected)
+  })
+
+
   test('Test Player wins with a Paper. Computer: Rock', () => {
     player.setHandGuesture(UserChoice.PAPER)
     computerPlayer.setHandGuesture(UserChoice.ROCK)
@@ -44,17 +78,6 @@ describe('Rules Under Test', () => {
     const actual = sut.deternimateWinner(player, computerPlayer)
 
     const expected = GameResult.PLAYER
-
-    expect(actual).toBe(expected)
-  })
-
-  test('Test Its a Tie! Computer: Rock. Player: Rock', () => {
-    player.setHandGuesture(UserChoice.ROCK)
-    computerPlayer.setHandGuesture(UserChoice.ROCK)
-
-    const actual = sut.deternimateWinner(player, computerPlayer)
-
-    const expected = GameResult.TIE
 
     expect(actual).toBe(expected)
   })
