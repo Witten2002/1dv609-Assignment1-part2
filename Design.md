@@ -40,26 +40,46 @@ class Game {
   +determineWinner(Rules: rules)
 }
 
-Game -- Player
-Game -- ComputerPlayer
+Game --> Player
+Game --> ComputerPlayer
 
 class Rules {
   +determineWinner(Player1: Player, Player2: Player)
 }
 
-Rules -- Game
+Rules <-- Game
 
 class GameController {
   -game: Game
   +startGame()
 }
 
-GameController -- Game
+GameController --> Game
 
 class GameView {
   +displayGameResult(Player: player)
   +displayAskForHandGesture()
 }
 
-GameView -- GameController
+GameView <-- GameController
+
+class UserInput {
+  <<Enum>>
+  ROCK
+  PAPER
+  SCISSORS
+}
+
+UserInput <.. Player
+UserInput <.. GameController
+
+class GameResult {
+  <<Enum>>
+  WIN
+  LOSE
+  DRAW
+}
+
+GameResult <.. GameView
+GameResult <.. Rules
 ```
