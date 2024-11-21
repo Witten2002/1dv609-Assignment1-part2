@@ -41,4 +41,16 @@ describe('Player Under Test', () => {
 
     expect(actual).toBe(expected)
   })
+
+  test('New Player Not A Valid Name. To Throw', () => {
+    expect(() => {
+      new Player ('Player@1')
+    }).toThrow()
+  })
+
+  test('New Player Valid Name. Not To Throw', () => {
+    expect(() => {
+      new Player ('Player 1')
+    }).not.toThrow()
+  })
 })

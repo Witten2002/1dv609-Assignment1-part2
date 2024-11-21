@@ -5,15 +5,24 @@ import { UserChoice } from './enums/UserChoice.ts'
 class Player {
   #handGuesutre: HandGuesture
   #factory: HandGestureFactory
-  #name: String
+  #name: string
 
-  constructor(name: String) {
+  constructor(name: string) {
     this.#setName(name)
     this.#factory = new HandGestureFactory()
   }
 
-  #setName(name: String) {
+  #setName(name: string) {
+    if (!this.#isValidName(name)) {
+      throw new Error('Invalid name');
+    }
+
     this.#name = name
+  }
+
+  #isValidName(name: string): boolean {
+    const nameRegex = /^[a-zA-Z0-9 ]+$/;
+    return name.length > 0 && nameRegex.test(name);
   }
 
   getName(): String {
