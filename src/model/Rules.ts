@@ -3,6 +3,7 @@ import { ComputerPlayer } from './ComputerPlayer.ts'
 import { GameResult } from './enums/GameResult.ts'
 import { Rock } from './HandGesture/Rock.ts'
 import { Paper } from './HandGesture/Paper.ts'
+import { Scissor } from './HandGesture/Scissor.ts'
 
 class Rules {
   deternimateWinner(player: Player, computerPlayer: ComputerPlayer) {
@@ -12,6 +13,10 @@ class Rules {
 
     if (player.getHandGuesture() instanceof Rock && computerPlayer.getHandGuesture() instanceof Paper) {
       return GameResult.COMPUTER
+    }
+
+    if (player.getHandGuesture() instanceof Scissor && computerPlayer.getHandGuesture() instanceof Scissor) {
+      return GameResult.TIE
     }
 
     if (player.getHandGuesture() instanceof Rock || player.getHandGuesture() instanceof Paper) {
