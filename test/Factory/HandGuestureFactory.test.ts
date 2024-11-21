@@ -5,9 +5,14 @@ import { Paper } from '../../src/model/HandGesture/Paper'
 import { Scissor } from '../../src/model/HandGesture/Scissor'
 
 describe('HandGestureFactory Under Test', () => {
-  test('HandGestureFactory With Rock', () => {
+  const setUpTest = (param) => {
     const sut = new HandGestureFactory()
-    const actual = sut.createHandGuesture(UserChoice.ROCK)
+    const actual = sut.createHandGuesture(param)
+
+    return actual
+  }
+  test('HandGestureFactory With Rock', () => {
+    const actual = setUpTest(UserChoice.ROCK)
 
     const expected = new Rock()
 
@@ -15,8 +20,7 @@ describe('HandGestureFactory Under Test', () => {
   })
 
   test('HandGestureFactory With Paper', () => {
-    const sut = new HandGestureFactory()
-    const actual = sut.createHandGuesture(UserChoice.PAPER)
+    const actual = setUpTest(UserChoice.PAPER)
 
     const expected = new Paper()
 
@@ -24,8 +28,7 @@ describe('HandGestureFactory Under Test', () => {
   })
 
   test('HandGestureFactory With Scissor', () => {
-    const sut = new HandGestureFactory()
-    const actual = sut.createHandGuesture(UserChoice.SCISSOR)
+    const actual = setUpTest(UserChoice.SCISSOR)
 
     const expected = new Scissor()
 
