@@ -3,7 +3,7 @@ import { Paper } from '../src/model/HandGesture/Paper'
 import { Rock } from '../src/model/HandGesture/Rock'
 
 describe('ComputerPlayer Under Test', () => {
-  test('GenerateRandomHandGesture', () => {
+  test('GenerateRandomHandGesture Rock', () => {
     const sut = new ComputerPlayer()
 
     // Mock Math.random to return a fixed value
@@ -12,6 +12,22 @@ describe('ComputerPlayer Under Test', () => {
     const actual = sut.generateRandomHandGesture()
 
     const expected = new Rock()
+
+    expect(actual).toStrictEqual(expected)
+
+    // Reset the mocked Math.random
+    jest.spyOn(Math, 'random').mockRestore()
+  })
+
+  test('GenerateRandomHandGesture Paper', () => {
+    const sut = new ComputerPlayer()
+
+    // Mock Math.random to return a fixed value
+    jest.spyOn(Math, 'random').mockReturnValue(1)
+
+    const actual = sut.generateRandomHandGesture()
+
+    const expected = new Paper()
 
     expect(actual).toStrictEqual(expected)
 
