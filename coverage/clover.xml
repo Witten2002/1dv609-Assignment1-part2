@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1732213683291" clover="3.2.0">
-  <project timestamp="1732213683291" name="All files">
-    <metrics statements="74" coveredstatements="74" conditionals="35" coveredconditionals="35" methods="14" coveredmethods="14" elements="123" coveredelements="123" complexity="0" loc="74" ncloc="74" packages="4" files="9" classes="9"/>
+<coverage generated="1732213730171" clover="3.2.0">
+  <project timestamp="1732213730171" name="All files">
+    <metrics statements="76" coveredstatements="76" conditionals="38" coveredconditionals="38" methods="14" coveredmethods="14" elements="128" coveredelements="128" complexity="0" loc="76" ncloc="76" packages="4" files="9" classes="9"/>
     <package name="model">
-      <metrics statements="42" coveredstatements="42" conditionals="25" coveredconditionals="25" methods="8" coveredmethods="8"/>
+      <metrics statements="44" coveredstatements="44" conditionals="28" coveredconditionals="28" methods="8" coveredmethods="8"/>
       <file name="ComputerPlayer.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\ComputerPlayer.ts">
         <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="1" count="2" type="stmt"/>
@@ -28,11 +28,11 @@
         <line num="25" count="28" type="cond" truecount="2" falsecount="0"/>
         <line num="29" count="1" type="stmt"/>
         <line num="32" count="124" type="stmt"/>
-        <line num="36" count="174" type="stmt"/>
+        <line num="36" count="177" type="stmt"/>
         <line num="40" count="3" type="stmt"/>
       </file>
       <file name="Rules.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\Rules.ts">
-        <metrics statements="21" coveredstatements="21" conditionals="22" coveredconditionals="22" methods="1" coveredmethods="1"/>
+        <metrics statements="23" coveredstatements="23" conditionals="25" coveredconditionals="25" methods="1" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
@@ -51,9 +51,11 @@
         <line num="31" count="1" type="stmt"/>
         <line num="34" count="4" type="cond" truecount="3" falsecount="0"/>
         <line num="35" count="1" type="stmt"/>
-        <line num="38" count="3" type="cond" truecount="1" falsecount="0"/>
-        <line num="39" count="2" type="stmt"/>
-        <line num="44" count="1" type="stmt"/>
+        <line num="38" count="3" type="cond" truecount="3" falsecount="0"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="42" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="43" count="2" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
       </file>
     </package>
     <package name="model.Factory">
@@ -65,9 +67,9 @@
         <line num="4" count="4" type="stmt"/>
         <line num="5" count="4" type="stmt"/>
         <line num="18" count="127" type="cond" truecount="3" falsecount="0"/>
-        <line num="20" count="46" type="stmt"/>
-        <line num="22" count="43" type="stmt"/>
-        <line num="24" count="38" type="stmt"/>
+        <line num="20" count="45" type="stmt"/>
+        <line num="22" count="39" type="stmt"/>
+        <line num="24" count="43" type="stmt"/>
         <line num="29" count="4" type="stmt"/>
       </file>
     </package>
