@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1732197306539" clover="3.2.0">
-  <project timestamp="1732197306539" name="All files">
-    <metrics statements="44" coveredstatements="44" conditionals="11" coveredconditionals="11" methods="11" coveredmethods="11" elements="66" coveredelements="66" complexity="0" loc="44" ncloc="44" packages="4" files="7" classes="7"/>
+<coverage generated="1732207760956" clover="3.2.0">
+  <project timestamp="1732207760956" name="All files">
+    <metrics statements="45" coveredstatements="45" conditionals="11" coveredconditionals="11" methods="11" coveredmethods="11" elements="67" coveredelements="67" complexity="0" loc="45" ncloc="45" packages="4" files="7" classes="7"/>
     <package name="model">
-      <metrics statements="16" coveredstatements="16" conditionals="3" coveredconditionals="3" methods="6" coveredmethods="6"/>
+      <metrics statements="17" coveredstatements="17" conditionals="3" coveredconditionals="3" methods="6" coveredmethods="6"/>
       <file name="ComputerPlayer.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\ComputerPlayer.ts">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="7" count="3" type="stmt"/>
-        <line num="11" count="3" type="stmt"/>
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="10" count="101" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
       </file>
       <file name="Player.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\Player.ts">
         <metrics statements="12" coveredstatements="12" conditionals="3" coveredconditionals="3" methods="4" coveredmethods="4"/>
         <line num="2" count="2" type="stmt"/>
-        <line num="11" count="9" type="stmt"/>
-        <line num="12" count="8" type="stmt"/>
-        <line num="16" count="9" type="cond" truecount="1" falsecount="0"/>
+        <line num="11" count="8" type="stmt"/>
+        <line num="12" count="7" type="stmt"/>
+        <line num="16" count="8" type="cond" truecount="1" falsecount="0"/>
         <line num="17" count="1" type="stmt"/>
-        <line num="20" count="8" type="stmt"/>
-        <line num="24" count="9" type="stmt"/>
-        <line num="25" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="7" type="stmt"/>
+        <line num="24" count="8" type="stmt"/>
+        <line num="25" count="8" type="cond" truecount="2" falsecount="0"/>
         <line num="29" count="1" type="stmt"/>
-        <line num="32" count="3" type="stmt"/>
-        <line num="36" count="3" type="stmt"/>
+        <line num="32" count="104" type="stmt"/>
+        <line num="36" count="104" type="stmt"/>
         <line num="40" count="2" type="stmt"/>
       </file>
     </package>
@@ -35,8 +36,8 @@
         <line num="3" count="3" type="stmt"/>
         <line num="4" count="3" type="stmt"/>
         <line num="5" count="3" type="stmt"/>
-        <line num="18" count="6" type="cond" truecount="3" falsecount="0"/>
-        <line num="20" count="2" type="stmt"/>
+        <line num="18" count="107" type="cond" truecount="3" falsecount="0"/>
+        <line num="20" count="103" type="stmt"/>
         <line num="22" count="2" type="stmt"/>
         <line num="24" count="2" type="stmt"/>
         <line num="29" count="3" type="stmt"/>

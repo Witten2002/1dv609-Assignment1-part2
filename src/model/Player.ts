@@ -14,15 +14,15 @@ class Player {
 
   #setName(name: string) {
     if (!this.#isValidName(name)) {
-      throw new Error('Invalid name');
+      throw new Error('Invalid name')
     }
 
     this.#name = name
   }
 
   #isValidName(name: string): boolean {
-    const nameRegex = /^[a-zA-Z0-9 ]+$/;
-    return name.length > 0 && nameRegex.test(name);
+    const nameRegex = /^[a-zA-Z0-9 ]+$/
+    return name.length > 0 && nameRegex.test(name)
   }
 
   getName(): String {
@@ -33,7 +33,7 @@ class Player {
   }
 
   getHandGuesture(): HandGuesture {
-    return this.#handGuesutre;
+    return this.#handGuesutre
   }
 }
 

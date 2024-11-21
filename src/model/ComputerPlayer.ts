@@ -1,5 +1,4 @@
-import { HandGuesture } from './HandGesture/HandGesture.ts'
-import { Rock } from './HandGesture/Rock.ts'
+import { UserChoice } from './enums/UserChoice.ts'
 import { Player } from './Player.ts'
 
 class ComputerPlayer extends Player {
@@ -7,9 +6,10 @@ class ComputerPlayer extends Player {
     super('ComputerPlayer')
   }
 
-  generateRandomHandGesture(): HandGuesture {
-    return 
+  generateRandomHandGesture(): void {
+    this.setHandGuesture(UserChoice.ROCK)
   }
+  
 }
 
 export { ComputerPlayer }
