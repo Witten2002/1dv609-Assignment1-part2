@@ -2,6 +2,7 @@ import { Player } from '../src/model/Player'
 import { Rock } from '../src/model/HandGesture/Rock'
 import { Paper } from '../src/model/HandGesture/Paper'
 import { Scissor } from '../src/model/HandGesture/Scissor'
+import { UserChoice } from '../src/model/enums/UserChoice'
 
 describe('Player Under Test', () => {
   const setUpTest = (param) => {
@@ -11,29 +12,24 @@ describe('Player Under Test', () => {
 
     return actual
   }
-  test('Set HandGuesture Rock', () => {
-    const rock = new Rock()
 
-    const actual = setUpTest(rock)
-    const expected = rock
+  test('Set HandGuesture Rock', () => {
+    const actual = setUpTest(UserChoice.ROCK)
+    const expected = new Rock()
 
     expect(actual).toStrictEqual(expected)
   })
 
   test('Set HandGuesture Paper', () => {
-    const paper = new Paper()
-
-    const actual = setUpTest(paper)
-    const expected = paper
+    const actual = setUpTest(UserChoice.PAPER)
+    const expected = new Paper()
 
     expect(actual).toStrictEqual(expected)
   })
 
   test('Set HandGuesture Scissor', () => {
-    const scissor = new Scissor()
-
-    const actual = setUpTest(scissor)
-    const expected = scissor
+    const actual = setUpTest(UserChoice.SCISSOR)
+    const expected = new Scissor()
 
     expect(actual).toStrictEqual(expected)
   })
