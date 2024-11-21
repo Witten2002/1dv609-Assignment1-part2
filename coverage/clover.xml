@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1732193628955" clover="3.2.0">
-  <project timestamp="1732193628955" name="All files">
+<coverage generated="1732193705661" clover="3.2.0">
+  <project timestamp="1732193705661" name="All files">
     <metrics statements="32" coveredstatements="32" conditionals="9" coveredconditionals="9" methods="7" coveredmethods="7" elements="48" coveredelements="48" complexity="0" loc="32" ncloc="32" packages="4" files="6" classes="6"/>
     <package name="model">
       <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
@@ -23,7 +23,7 @@
       <file name="HandGuestureFactory.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\Factory\HandGuestureFactory.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
       </file>
     </package>
