@@ -5,7 +5,11 @@ import { Rock } from './HandGesture/Rock.ts'
 
 class Rules {
   deternimateWinner(player: Player, computerPlayer: ComputerPlayer) {
-    return GameResult.PLAYER
+    if (player.getHandGuesture() instanceof Rock) {
+      return GameResult.PLAYER
+    }
+
+    return GameResult.COMPUTER
   }
 }
 
