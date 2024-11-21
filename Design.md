@@ -63,7 +63,7 @@ class GameView {
 
 GameView <-- GameController
 
-class UserInput {
+class UserChoice {
   <<Enum>>
   ROCK
   PAPER
