@@ -31,6 +31,10 @@ class Rules {
       return GameResult.PLAYER
     }
 
+    if (player.getHandGuesture() instanceof Paper && computerPlayer.getHandGuesture() instanceof Scissor) {
+      return GameResult.COMPUTER
+    }
+
     if (computerPlayer.getHandGuesture() instanceof Rock) {
       return GameResult.COMPUTER
     }

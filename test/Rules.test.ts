@@ -103,7 +103,7 @@ describe('Rules Under Test', () => {
     expect(actual).toBe(expected)
   })
 
-  test('Test Computer wins with a Paper. Player: Scissor', () => {
+  test('Test Computer wins with a Scissor. Player: Paper', () => {
     player.setHandGuesture(UserChoice.PAPER)
     computerPlayer.setHandGuesture(UserChoice.SCISSOR)
 
