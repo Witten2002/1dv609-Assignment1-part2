@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1732213249481" clover="3.2.0">
-  <project timestamp="1732213249481" name="All files">
+<coverage generated="1732213360403" clover="3.2.0">
+  <project timestamp="1732213360403" name="All files">
     <metrics statements="72" coveredstatements="72" conditionals="32" coveredconditionals="32" methods="14" coveredmethods="14" elements="118" coveredelements="118" complexity="0" loc="72" ncloc="72" packages="4" files="9" classes="9"/>
     <package name="model">
       <metrics statements="40" coveredstatements="40" conditionals="22" coveredconditionals="22" methods="8" coveredmethods="8"/>
@@ -28,7 +28,7 @@
         <line num="25" count="26" type="cond" truecount="2" falsecount="0"/>
         <line num="29" count="1" type="stmt"/>
         <line num="32" count="122" type="stmt"/>
-        <line num="36" count="160" type="stmt"/>
+        <line num="36" count="161" type="stmt"/>
         <line num="40" count="3" type="stmt"/>
       </file>
       <file name="Rules.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\Rules.ts">
@@ -48,8 +48,8 @@
         <line num="26" count="5" type="cond" truecount="3" falsecount="0"/>
         <line num="27" count="1" type="stmt"/>
         <line num="30" count="4" type="cond" truecount="3" falsecount="0"/>
-        <line num="31" count="2" type="stmt"/>
-        <line num="34" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="34" count="3" type="cond" truecount="1" falsecount="0"/>
         <line num="35" count="2" type="stmt"/>
         <line num="40" count="1" type="stmt"/>
       </file>
@@ -63,8 +63,8 @@
         <line num="4" count="4" type="stmt"/>
         <line num="5" count="4" type="stmt"/>
         <line num="18" count="125" type="cond" truecount="3" falsecount="0"/>
-        <line num="20" count="45" type="stmt"/>
-        <line num="22" count="40" type="stmt"/>
+        <line num="20" count="48" type="stmt"/>
+        <line num="22" count="37" type="stmt"/>
         <line num="24" count="40" type="stmt"/>
         <line num="29" count="4" type="stmt"/>
       </file>
