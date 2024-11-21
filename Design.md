@@ -70,8 +70,8 @@ class UserChoice {
   SCISSOR
 }
 
-UserInput <.. Player
-UserInput <.. GameController
+UserChoice <.. Player
+UserChoice <.. GameController
 
 class GameResult {
   <<Enum>>
