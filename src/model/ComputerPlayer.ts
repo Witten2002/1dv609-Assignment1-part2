@@ -7,9 +7,15 @@ class ComputerPlayer extends Player {
   }
 
   generateRandomHandGesture(): void {
-    this.setHandGuesture(UserChoice.ROCK)
+    const userChoices = Object.values(UserChoice).filter(value => typeof value === 'number') as UserChoice[];
+    const random = Math.floor(Math.random() * userChoices.length)
+
+    const computerChoice = userChoices[random]
+
+    console.log(computerChoice, typeof computerChoice)
+
+    this.setHandGuesture(computerChoice)
   }
-  
 }
 
 export { ComputerPlayer }

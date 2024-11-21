@@ -29,6 +29,6 @@ describe('ComputerPlayer Under Test', () => {
       actualValues.add(actual)
     }
 
-    expect(expected).toContainEqual(new Set([...actualValues]))
+    expect([...actualValues]).toEqual(expect.arrayContaining(expected))
   })
 })
