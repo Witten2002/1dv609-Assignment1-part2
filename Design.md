@@ -87,7 +87,7 @@ class HandGuestureFactory {
   +createHandGesture(UserChoice: userChoice) HandGesture
 }
 
-HandGuestureFactory <.. Player
+HandGuestureFactory <-- Player
 HandGuestureFactory ..> Rock
 HandGuestureFactory ..> Paper
 HandGuestureFactory ..> Scissors
