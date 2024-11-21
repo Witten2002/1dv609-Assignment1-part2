@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1732212509595" clover="3.2.0">
-  <project timestamp="1732212509595" name="All files">
-    <metrics statements="68" coveredstatements="68" conditionals="26" coveredconditionals="26" methods="14" coveredmethods="14" elements="108" coveredelements="108" complexity="0" loc="68" ncloc="68" packages="4" files="9" classes="9"/>
+<coverage generated="1732213078232" clover="3.2.0">
+  <project timestamp="1732213078232" name="All files">
+    <metrics statements="70" coveredstatements="70" conditionals="29" coveredconditionals="29" methods="14" coveredmethods="14" elements="113" coveredelements="113" complexity="0" loc="70" ncloc="70" packages="4" files="9" classes="9"/>
     <package name="model">
-      <metrics statements="36" coveredstatements="36" conditionals="16" coveredconditionals="16" methods="8" coveredmethods="8"/>
+      <metrics statements="38" coveredstatements="38" conditionals="19" coveredconditionals="19" methods="8" coveredmethods="8"/>
       <file name="ComputerPlayer.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\ComputerPlayer.ts">
         <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="1" count="2" type="stmt"/>
@@ -28,26 +28,28 @@
         <line num="25" count="22" type="cond" truecount="2" falsecount="0"/>
         <line num="29" count="1" type="stmt"/>
         <line num="32" count="118" type="stmt"/>
-        <line num="36" count="136" type="stmt"/>
+        <line num="36" count="144" type="stmt"/>
         <line num="40" count="3" type="stmt"/>
       </file>
       <file name="Rules.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\Rules.ts">
-        <metrics statements="15" coveredstatements="15" conditionals="13" coveredconditionals="13" methods="1" coveredmethods="1"/>
+        <metrics statements="17" coveredstatements="17" conditionals="16" coveredconditionals="16" methods="1" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="10" count="7" type="cond" truecount="3" falsecount="0"/>
-        <line num="11" count="2" type="stmt"/>
-        <line num="14" count="5" type="cond" truecount="3" falsecount="0"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="14" count="6" type="cond" truecount="3" falsecount="0"/>
         <line num="15" count="1" type="stmt"/>
-        <line num="18" count="4" type="cond" truecount="3" falsecount="0"/>
+        <line num="18" count="5" type="cond" truecount="3" falsecount="0"/>
         <line num="19" count="1" type="stmt"/>
-        <line num="22" count="3" type="cond" truecount="3" falsecount="0"/>
+        <line num="22" count="4" type="cond" truecount="3" falsecount="0"/>
         <line num="23" count="1" type="stmt"/>
-        <line num="26" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="27" count="2" type="stmt"/>
-        <line num="32" count="1" type="stmt"/>
+        <line num="26" count="3" type="cond" truecount="3" falsecount="0"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="30" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
       </file>
     </package>
     <package name="model.Factory">
@@ -59,9 +61,9 @@
         <line num="4" count="4" type="stmt"/>
         <line num="5" count="4" type="stmt"/>
         <line num="18" count="121" type="cond" truecount="3" falsecount="0"/>
-        <line num="20" count="44" type="stmt"/>
-        <line num="22" count="39" type="stmt"/>
-        <line num="24" count="38" type="stmt"/>
+        <line num="20" count="38" type="stmt"/>
+        <line num="22" count="47" type="stmt"/>
+        <line num="24" count="36" type="stmt"/>
         <line num="29" count="4" type="stmt"/>
       </file>
     </package>

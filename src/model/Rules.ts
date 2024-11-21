@@ -19,7 +19,11 @@ class Rules {
       return GameResult.TIE
     }
 
-    if (player.getHandGuesture() instanceof Rock || player.getHandGuesture() instanceof Paper) {
+    if (player.getHandGuesture() instanceof Rock && computerPlayer.getHandGuesture() instanceof Scissor) {
+      return GameResult.PLAYER
+    }
+
+    if (player.getHandGuesture() instanceof Scissor && computerPlayer.getHandGuesture() instanceof Paper) {
       return GameResult.PLAYER
     }
 
