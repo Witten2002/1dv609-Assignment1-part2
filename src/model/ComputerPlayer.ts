@@ -12,8 +12,6 @@ class ComputerPlayer extends Player {
 
     const computerChoice = userChoices[random]
 
-    console.log(computerChoice, typeof computerChoice)
-
     this.setHandGuesture(computerChoice)
   }
 }

@@ -7,40 +7,15 @@ import { Scissor } from './HandGesture/Scissor.ts'
 
 class Rules {
   deternimateWinner(player: Player, computerPlayer: ComputerPlayer) {
-    if (player.getHandGuesture() instanceof Rock && computerPlayer.getHandGuesture() instanceof Rock) {
-      return GameResult.TIE
-    }
+    const playerHand = player.getHandGuesture()
+    const computerHand = computerPlayer.getHandGuesture()
 
-    if (player.getHandGuesture() instanceof Rock && computerPlayer.getHandGuesture() instanceof Paper) {
-      return GameResult.COMPUTER
-    }
-
-    if (player.getHandGuesture() instanceof Scissor && computerPlayer.getHandGuesture() instanceof Scissor) {
-      return GameResult.TIE
-    }
-
-    if (player.getHandGuesture() instanceof Rock && computerPlayer.getHandGuesture() instanceof Scissor) {
+    if (playerHand.beats(computerHand)) {
       return GameResult.PLAYER
-    }
-
-    if (player.getHandGuesture() instanceof Scissor && computerPlayer.getHandGuesture() instanceof Paper) {
-      return GameResult.PLAYER
-    }
-
-    if (player.getHandGuesture() instanceof Paper && computerPlayer.getHandGuesture() instanceof Rock) {
-      return GameResult.PLAYER
-    }
-
-    if (player.getHandGuesture() instanceof Paper && computerPlayer.getHandGuesture() instanceof Scissor) {
+    } else if (computerHand.beats(playerHand)) {
       return GameResult.COMPUTER
-    }
-
-    if (player.getHandGuesture() instanceof Paper && computerPlayer.getHandGuesture() instanceof Paper) {
+    } else {
       return GameResult.TIE
-    }
-
-    if (computerPlayer.getHandGuesture() instanceof Rock) {
-      return GameResult.COMPUTER
     }
   }
 }
