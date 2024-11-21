@@ -27,8 +27,8 @@ describe('Rules Under Test', () => {
   })
 
   test('Test Computer wins with a Loses. Player: Scissor', () => {
-    player.setHandGuesture(UserChoice.ROCK)
-    computerPlayer.setHandGuesture(UserChoice.SCISSOR)
+    player.setHandGuesture(UserChoice.SCISSOR)
+    computerPlayer.setHandGuesture(UserChoice.ROCK)
 
     const actual = sut.deternimateWinner(player, computerPlayer)
 
