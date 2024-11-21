@@ -82,4 +82,13 @@ class GameResult {
 
 GameResult <.. GameView
 GameResult <.. Rules
+
+class HandGuestureFactory {
+  +createHandGesture(UserChoice: userChoice) HandGesture
+}
+
+HandGuestureFactory <.. Player
+HandGuestureFactory ..> Rock
+HandGuestureFactory ..> Paper
+HandGuestureFactory ..> Scissors
 ```
