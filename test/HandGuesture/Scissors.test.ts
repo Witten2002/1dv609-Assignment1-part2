@@ -3,33 +3,29 @@ import { Rock } from '../../src/model/HandGesture/Rock'
 import { Paper } from '../../src/model/HandGesture/Paper'
 
 describe('Scissors Under Test', () => {
-  const getSUT = () => {
-    return new Scissor()
-  }
+  const setUpTest = (param) => {
+    const sut = new Scissor()
+    const actual = sut.beats(param)
 
-  const getRock = () => {
-    return new Rock()
+    return actual
   }
 
   test('Scissor Beat Rock', () => {
-    const sut = getSUT()
-    const actual = sut.beats(getRock())
+    const actual = setUpTest(new Rock())
     const expected = false
 
     expect(actual).toBe(expected)
   })
 
   test('Scissor Beats Paper', () => {
-    const sut = getSUT()
-    const actual = sut.beats(new Paper())
+    const actual = setUpTest(new Paper())
     const expected = true
 
     expect(actual).toBe(expected)
   })
 
   test('Scissor Beats Scissor', () => {
-    const sut = getSUT()
-    const actual = sut.beats(getSUT())
+    const actual = setUpTest(new Scissor())
     const expected = false
 
     expect(actual).toBe(expected)
