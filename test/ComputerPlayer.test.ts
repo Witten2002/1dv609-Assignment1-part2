@@ -18,4 +18,17 @@ describe('ComputerPlayer Under Test', () => {
 
     expect(expected).toContainEqual(actual)
   })
+
+  test('ComputerPlayer should generate valid random UserChoices', () => {
+    const actualValues = new Set()
+
+    for (let i = 0; i < 100; i++) { 
+      sut.generateRandomHandGesture()
+      const actual = sut.getHandGuesture()
+
+      actualValues.add(actual)
+    }
+
+    expect(expected).toContainEqual(new Set([...actualValues]))
+  })
 })
