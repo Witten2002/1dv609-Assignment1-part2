@@ -113,4 +113,15 @@ describe('Rules Under Test', () => {
 
     expect(actual).toBe(expected)
   })
+
+  test('Test Its a Tie! Computer: Paper. Player: Paper', () => {
+    player.setHandGuesture(UserChoice.PAPER)
+    computerPlayer.setHandGuesture(UserChoice.PAPER)
+
+    const actual = sut.deternimateWinner(player, computerPlayer)
+
+    const expected = GameResult.TIE
+
+    expect(actual).toBe(expected)
+  })
 })
