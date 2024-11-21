@@ -26,4 +26,12 @@ describe('Scissors Under Test', () => {
 
     expect(actual).toBe(expected)
   })
+
+  test('Scissor Beats Scissor', () => {
+    const sut = getSUT()
+    const actual = sut.beats(getSUT())
+    const expected = false
+
+    expect(actual).toBe(expected)
+  })
 })
