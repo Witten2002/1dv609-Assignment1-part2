@@ -103,15 +103,14 @@ describe('Rules Under Test', () => {
     expect(actual).toBe(expected)
   })
 
+  test('Test Computer wins with a Paper. Player: Rock', () => {
+    player.setHandGuesture(UserChoice.PAPER)
+    computerPlayer.setHandGuesture(UserChoice.ROCK)
 
-  // test('Test Player wins with a Paper. Computer: Rock', () => {
-  //   player.setHandGuesture(UserChoice.PAPER)
-  //   computerPlayer.setHandGuesture(UserChoice.ROCK)
+    const actual = sut.deternimateWinner(player, computerPlayer)
 
-  //   const actual = sut.deternimateWinner(player, computerPlayer)
+    const expected = GameResult.COMPUTER
 
-  //   const expected = GameResult.PLAYER
-
-  //   expect(actual).toBe(expected)
-  // })
+    expect(actual).toBe(expected)
+  })
 })

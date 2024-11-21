@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1732213196565" clover="3.2.0">
-  <project timestamp="1732213196565" name="All files">
+<coverage generated="1732213249481" clover="3.2.0">
+  <project timestamp="1732213249481" name="All files">
     <metrics statements="72" coveredstatements="72" conditionals="32" coveredconditionals="32" methods="14" coveredmethods="14" elements="118" coveredelements="118" complexity="0" loc="72" ncloc="72" packages="4" files="9" classes="9"/>
     <package name="model">
       <metrics statements="40" coveredstatements="40" conditionals="22" coveredconditionals="22" methods="8" coveredmethods="8"/>
@@ -8,7 +8,7 @@
         <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
-        <line num="6" count="10" type="stmt"/>
+        <line num="6" count="11" type="stmt"/>
         <line num="10" count="606" type="stmt"/>
         <line num="11" count="101" type="stmt"/>
         <line num="13" count="101" type="stmt"/>
@@ -19,16 +19,16 @@
       <file name="Player.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\Player.ts">
         <metrics statements="12" coveredstatements="12" conditionals="3" coveredconditionals="3" methods="4" coveredmethods="4"/>
         <line num="2" count="3" type="stmt"/>
-        <line num="11" count="24" type="stmt"/>
-        <line num="12" count="23" type="stmt"/>
-        <line num="16" count="24" type="cond" truecount="1" falsecount="0"/>
+        <line num="11" count="26" type="stmt"/>
+        <line num="12" count="25" type="stmt"/>
+        <line num="16" count="26" type="cond" truecount="1" falsecount="0"/>
         <line num="17" count="1" type="stmt"/>
-        <line num="20" count="23" type="stmt"/>
-        <line num="24" count="24" type="stmt"/>
-        <line num="25" count="24" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="25" type="stmt"/>
+        <line num="24" count="26" type="stmt"/>
+        <line num="25" count="26" type="cond" truecount="2" falsecount="0"/>
         <line num="29" count="1" type="stmt"/>
-        <line num="32" count="120" type="stmt"/>
-        <line num="36" count="153" type="stmt"/>
+        <line num="32" count="122" type="stmt"/>
+        <line num="36" count="160" type="stmt"/>
         <line num="40" count="3" type="stmt"/>
       </file>
       <file name="Rules.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\Rules.ts">
@@ -37,18 +37,18 @@
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
-        <line num="10" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="10" count="9" type="cond" truecount="3" falsecount="0"/>
         <line num="11" count="1" type="stmt"/>
-        <line num="14" count="7" type="cond" truecount="3" falsecount="0"/>
+        <line num="14" count="8" type="cond" truecount="3" falsecount="0"/>
         <line num="15" count="1" type="stmt"/>
-        <line num="18" count="6" type="cond" truecount="3" falsecount="0"/>
+        <line num="18" count="7" type="cond" truecount="3" falsecount="0"/>
         <line num="19" count="1" type="stmt"/>
-        <line num="22" count="5" type="cond" truecount="3" falsecount="0"/>
+        <line num="22" count="6" type="cond" truecount="3" falsecount="0"/>
         <line num="23" count="1" type="stmt"/>
-        <line num="26" count="4" type="cond" truecount="3" falsecount="0"/>
+        <line num="26" count="5" type="cond" truecount="3" falsecount="0"/>
         <line num="27" count="1" type="stmt"/>
-        <line num="30" count="3" type="cond" truecount="3" falsecount="0"/>
-        <line num="31" count="1" type="stmt"/>
+        <line num="30" count="4" type="cond" truecount="3" falsecount="0"/>
+        <line num="31" count="2" type="stmt"/>
         <line num="34" count="2" type="cond" truecount="1" falsecount="0"/>
         <line num="35" count="2" type="stmt"/>
         <line num="40" count="1" type="stmt"/>
@@ -62,10 +62,10 @@
         <line num="3" count="4" type="stmt"/>
         <line num="4" count="4" type="stmt"/>
         <line num="5" count="4" type="stmt"/>
-        <line num="18" count="123" type="cond" truecount="3" falsecount="0"/>
-        <line num="20" count="39" type="stmt"/>
-        <line num="22" count="47" type="stmt"/>
-        <line num="24" count="37" type="stmt"/>
+        <line num="18" count="125" type="cond" truecount="3" falsecount="0"/>
+        <line num="20" count="45" type="stmt"/>
+        <line num="22" count="40" type="stmt"/>
+        <line num="24" count="40" type="stmt"/>
         <line num="29" count="4" type="stmt"/>
       </file>
     </package>
