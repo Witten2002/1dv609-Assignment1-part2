@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1732194727852" clover="3.2.0">
-  <project timestamp="1732194727852" name="All files">
-    <metrics statements="33" coveredstatements="33" conditionals="8" coveredconditionals="8" methods="8" coveredmethods="8" elements="49" coveredelements="49" complexity="0" loc="33" ncloc="33" packages="4" files="6" classes="6"/>
+<coverage generated="1732195203892" clover="3.2.0">
+  <project timestamp="1732195203893" name="All files">
+    <metrics statements="36" coveredstatements="36" conditionals="8" coveredconditionals="8" methods="9" coveredmethods="9" elements="53" coveredelements="53" complexity="0" loc="36" ncloc="36" packages="4" files="6" classes="6"/>
     <package name="model">
-      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
       <file name="Player.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\Player.ts">
-        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
         <line num="2" count="1" type="stmt"/>
-        <line num="10" count="3" type="stmt"/>
-        <line num="14" count="3" type="stmt"/>
-        <line num="18" count="3" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
       </file>
     </package>
     <package name="model.Factory">

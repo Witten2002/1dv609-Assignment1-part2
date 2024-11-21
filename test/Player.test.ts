@@ -6,7 +6,7 @@ import { UserChoice } from '../src/model/enums/UserChoice'
 
 describe('Player Under Test', () => {
   const setUpTest = (param) => {
-    const sut = new Player()
+    const sut = new Player('Player')
     sut.setHandGuesture(param)
     const actual = sut.getHandGuesture()
 
@@ -32,5 +32,13 @@ describe('Player Under Test', () => {
     const expected = new Scissor()
 
     expect(actual).toStrictEqual(expected)
+  })
+
+  test('New Player Correct Name', () => {
+    const player = new Player ('Player One')
+    const actual = player.getName()
+    const expected = 'Player One'
+
+    expect(actual).toBe(expected)
   })
 })
