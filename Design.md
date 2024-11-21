@@ -67,7 +67,7 @@ class UserInput {
   <<Enum>>
   ROCK
   PAPER
-  SCISSORS
+  SCISSOR
 }
 
 UserInput <.. Player
