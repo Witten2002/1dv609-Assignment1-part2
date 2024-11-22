@@ -154,13 +154,18 @@ describe('Rules Under Test', () => {
   })
 
   test('Test Player Win with Paper! Computer: Rock', () => {
-    player.setHandGuesture(UserChoice.PAPER)
-    computerPlayer.setHandGuesture(UserChoice.ROCK)
+    player.getHandGuesture = jest.fn().mockReturnValue(new Paper())
+    computerPlayer.getHandGuesture = jest.fn().mockReturnValue(new Rock())
+
+    const spy = jest.spyOn(sut, 'deternimateWinner')
 
     const actual = sut.deternimateWinner(player, computerPlayer)
 
     const expected = GameResult.PLAYER
 
+    expect(spy).toHaveBeenCalled()
+    expect(player.getHandGuesture).toHaveBeenCalled()
+    expect(computerPlayer.getHandGuesture).toHaveBeenCalled()
     expect(actual).toBe(expected)
   })
 
