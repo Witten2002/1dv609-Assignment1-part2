@@ -186,26 +186,18 @@ describe('Rules Under Test', () => {
   })
 
   test('Test Its a Tie! Computer: Paper. Player: Paper', () => {
-    player.setHandGuesture(UserChoice.PAPER)
-    computerPlayer.setHandGuesture(UserChoice.PAPER)
+    player.getHandGuesture = jest.fn().mockReturnValue(new Paper())
+    computerPlayer.getHandGuesture = jest.fn().mockReturnValue(new Paper())
+
+    const spy = jest.spyOn(sut, 'deternimateWinner')
 
     const actual = sut.deternimateWinner(player, computerPlayer)
 
     const expected = GameResult.TIE
 
+    expect(spy).toHaveBeenCalled()
+    expect(player.getHandGuesture).toHaveBeenCalled()
+    expect(computerPlayer.getHandGuesture).toHaveBeenCalled()
     expect(actual).toBe(expected)
   })
-
-  // // Tydligen är det såhär jag ska göra när jag arbetar med mockade saker just nu.
-  // test('Player hand beats Computer hand (Rock vs Scissor)', () => {
-  //   // Mocking `getHandGuesture` to return Rock for Player and Scissor for Computer
-  //   player.getHandGuesture = jest.fn().mockReturnValue(new Rock())
-  //   computerPlayer.getHandGuesture = jest.fn().mockReturnValue(new Scissor())
-
-  //   const result = sut.deternimateWinner(player, computerPlayer)
-
-  //   expect(result).toBe(GameResult.PLAYER) // Rock beats Scissor
-  //   expect(player.getHandGuesture).toHaveBeenCalled()
-  //   expect(computerPlayer.getHandGuesture).toHaveBeenCalled()
-  // })
 })
