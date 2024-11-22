@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1732296761999" clover="3.2.0">
-  <project timestamp="1732296761999" name="All files">
-    <metrics statements="61" coveredstatements="60" conditionals="17" coveredconditionals="16" methods="14" coveredmethods="14" elements="92" coveredelements="90" complexity="0" loc="61" ncloc="61" packages="4" files="9" classes="9"/>
+<coverage generated="1732296953470" clover="3.2.0">
+  <project timestamp="1732296953470" name="All files">
+    <metrics statements="61" coveredstatements="61" conditionals="17" coveredconditionals="17" methods="14" coveredmethods="14" elements="92" coveredelements="92" complexity="0" loc="61" ncloc="61" packages="4" files="9" classes="9"/>
     <package name="model">
-      <metrics statements="29" coveredstatements="28" conditionals="7" coveredconditionals="6" methods="8" coveredmethods="8"/>
+      <metrics statements="29" coveredstatements="29" conditionals="7" coveredconditionals="7" methods="8" coveredmethods="8"/>
       <file name="ComputerPlayer.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\ComputerPlayer.ts">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
@@ -31,14 +31,14 @@
         <line num="40" count="2" type="stmt"/>
       </file>
       <file name="Rules.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\Rules.ts">
-        <metrics statements="9" coveredstatements="8" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
         <line num="10" count="10" type="stmt"/>
         <line num="11" count="10" type="stmt"/>
         <line num="13" count="10" type="cond" truecount="2" falsecount="0"/>
         <line num="14" count="1" type="stmt"/>
-        <line num="15" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="16" count="0" type="stmt"/>
+        <line num="15" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="1" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
         <line num="24" count="1" type="stmt"/>
       </file>
@@ -52,9 +52,9 @@
         <line num="4" count="3" type="stmt"/>
         <line num="5" count="3" type="stmt"/>
         <line num="18" count="107" type="cond" truecount="3" falsecount="0"/>
-        <line num="20" count="33" type="stmt"/>
-        <line num="22" count="35" type="stmt"/>
-        <line num="24" count="39" type="stmt"/>
+        <line num="20" count="29" type="stmt"/>
+        <line num="22" count="46" type="stmt"/>
+        <line num="24" count="32" type="stmt"/>
         <line num="29" count="3" type="stmt"/>
       </file>
     </package>
@@ -63,17 +63,17 @@
       <file name="Paper.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\HandGesture\Paper.ts">
         <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="2" count="7" type="stmt"/>
-        <line num="12" count="3" type="cond" truecount="1" falsecount="0"/>
-        <line num="13" count="1" type="stmt"/>
+        <line num="12" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="13" count="2" type="stmt"/>
         <line num="16" count="2" type="stmt"/>
         <line num="20" count="7" type="stmt"/>
       </file>
       <file name="Rock.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\HandGesture\Rock.ts">
         <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="2" count="7" type="stmt"/>
-        <line num="12" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="7" type="cond" truecount="1" falsecount="0"/>
         <line num="13" count="2" type="stmt"/>
-        <line num="16" count="4" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
         <line num="20" count="7" type="stmt"/>
       </file>
       <file name="Scissor.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\HandGesture\Scissor.ts">

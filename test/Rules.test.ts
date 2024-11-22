@@ -5,6 +5,7 @@ import { UserChoice } from '../src/model/enums/UserChoice.ts'
 import { GameResult } from '../src/model/enums/GameResult.ts'
 import { Rock } from '../src/model/HandGesture/Rock.ts'
 import { Scissor } from '../src/model/HandGesture/Scissor.ts'
+import { Paper } from '../src/model/HandGesture/Paper.ts'
 
 jest.mock('../src/model/Player.ts', () => {
   return {
@@ -73,13 +74,18 @@ describe('Rules Under Test', () => {
   })
 
   test('Test Player loses with a Rock. Computer: Paper', () => {
-    player.setHandGuesture(UserChoice.ROCK)
-    computerPlayer.setHandGuesture(UserChoice.PAPER)
+    player.getHandGuesture = jest.fn().mockReturnValue(new Rock())
+    computerPlayer.getHandGuesture = jest.fn().mockReturnValue(new Paper())
+
+    const spy = jest.spyOn(sut, 'deternimateWinner')
 
     const actual = sut.deternimateWinner(player, computerPlayer)
 
     const expected = GameResult.COMPUTER
 
+    expect(spy).toHaveBeenCalled()
+    expect(player.getHandGuesture).toHaveBeenCalled()
+    expect(computerPlayer.getHandGuesture).toHaveBeenCalled()
     expect(actual).toBe(expected)
   })
 
