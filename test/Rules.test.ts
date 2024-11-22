@@ -3,6 +3,30 @@ import { Player } from '../src/model/Player.ts'
 import { ComputerPlayer } from '../src/model/ComputerPlayer.ts'
 import { UserChoice } from '../src/model/enums/UserChoice.ts'
 import { GameResult } from '../src/model/enums/GameResult.ts'
+import { Rock } from '../src/model/HandGesture/Rock.ts'
+import { Scissor } from '../src/model/HandGesture/Scissor.ts'
+
+jest.mock('../src/model/Player.ts', () => {
+  return {
+    Player: jest.fn().mockImplementation(function (name: string) {
+      this.name = name;
+      this.getHandGuesture = jest.fn();
+      this.setHandGuesture = jest.fn();
+      this.beats = jest.fn(); // Add beats as a method
+    }),
+  };
+});
+
+
+jest.mock('../src/model/ComputerPlayer.ts', () => {
+  return {
+    ComputerPlayer: jest.fn().mockImplementation(function () {
+      Player.call(this, 'ComputerPlayer'); // Call the mocked Player constructor
+      this.setHandGuesture = jest.fn();
+    }),
+  };
+});
+
 
 describe('Rules Under Test', () => {
   let sut: Rules
@@ -13,16 +37,22 @@ describe('Rules Under Test', () => {
     sut = new Rules()
     player = new Player('Player')
     computerPlayer = new ComputerPlayer()
+
+    jest.clearAllMocks()
   })
 
   test('Test Its a Tie! Computer: Rock. Player: Rock', () => {
-    player.setHandGuesture(UserChoice.ROCK)
-    computerPlayer.setHandGuesture(UserChoice.ROCK)
+    player.getHandGuesture = jest.fn().mockReturnValue(new Rock())
+    computerPlayer.getHandGuesture = jest.fn().mockReturnValue(new Rock())
+
+    const spy = jest.spyOn(sut, 'deternimateWinner')
 
     const actual = sut.deternimateWinner(player, computerPlayer)
-
     const expected = GameResult.TIE
 
+    expect(spy).toHaveBeenCalled()
+    expect(player.getHandGuesture).toHaveBeenCalled()
+    expect(computerPlayer.getHandGuesture).toHaveBeenCalled()
     expect(actual).toBe(expected)
   })
 
@@ -124,4 +154,17 @@ describe('Rules Under Test', () => {
 
     expect(actual).toBe(expected)
   })
+
+  // // Tydligen är det såhär jag ska göra när jag arbetar med mockade saker just nu.
+  // test('Player hand beats Computer hand (Rock vs Scissor)', () => {
+  //   // Mocking `getHandGuesture` to return Rock for Player and Scissor for Computer
+  //   player.getHandGuesture = jest.fn().mockReturnValue(new Rock())
+  //   computerPlayer.getHandGuesture = jest.fn().mockReturnValue(new Scissor())
+
+  //   const result = sut.deternimateWinner(player, computerPlayer)
+
+  //   expect(result).toBe(GameResult.PLAYER) // Rock beats Scissor
+  //   expect(player.getHandGuesture).toHaveBeenCalled()
+  //   expect(computerPlayer.getHandGuesture).toHaveBeenCalled()
+  // })
 })
