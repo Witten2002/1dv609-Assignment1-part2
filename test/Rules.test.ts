@@ -44,7 +44,7 @@ describe('Rules Under Test', () => {
     sut = new Rules()
     const handGestureFactory = new HandGestureFactory()
     player = new Player('Player', handGestureFactory)
-    computerPlayer = new ComputerPlayer()
+    computerPlayer = new ComputerPlayer(handGestureFactory)
 
     jest.clearAllMocks()
   })

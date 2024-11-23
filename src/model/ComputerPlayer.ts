@@ -1,9 +1,10 @@
 import { UserChoice } from './enums/UserChoice.ts'
 import { Player } from './Player.ts'
+import { HandGestureFactory } from './Factory/HandGuestureFactory.ts'
 
 class ComputerPlayer extends Player {
-  constructor() {
-    super('ComputerPlayer')
+  constructor(handgestureFactory: HandGestureFactory) {
+    super('ComputerPlayer', handgestureFactory)
   }
 
   generateRandomHandGesture(): void {
