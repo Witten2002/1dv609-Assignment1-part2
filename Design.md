@@ -44,7 +44,7 @@ Game --> Player
 Game --> ComputerPlayer
 
 class Rules {
-  +determineWinner(Player1: Player, Player2: Player)
+  rules
 }
 
 Rules <-- Game

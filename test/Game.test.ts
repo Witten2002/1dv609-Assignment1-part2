@@ -1,11 +1,11 @@
-import { Rules } from '../src/model/Rules.ts'
+import { Game } from '../src/model/Game.ts'
 import { Player } from '../src/model/Player.ts'
 import { ComputerPlayer } from '../src/model/ComputerPlayer.ts'
 import { GameResult } from '../src/model/enums/GameResult.ts'
 import { Rock } from '../src/model/HandGesture/Rock.ts'
 import { Scissor } from '../src/model/HandGesture/Scissor.ts'
 import { Paper } from '../src/model/HandGesture/Paper.ts'
-import { HandGestureFactory } from '../src/model/Factory/HandGuestureFactory'
+import { HandGestureFactory } from '../src/model/Factory/HandGuestureFactory.ts'
 
 jest.mock('../src/model/Factory/HandGuestureFactory', () => {
   return {
@@ -36,12 +36,12 @@ jest.mock('../src/model/ComputerPlayer.ts', () => {
 })
 
 describe('Rules Under Test', () => {
-  let sut: Rules
+  let sut: Game
   let player: Player
   let computerPlayer: ComputerPlayer
 
   beforeEach(() => {
-    sut = new Rules()
+    sut = new Game()
     const handGestureFactory = new HandGestureFactory()
     player = new Player('Player', handGestureFactory)
     computerPlayer = new ComputerPlayer(handGestureFactory)
