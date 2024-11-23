@@ -9,7 +9,7 @@ import { Paper } from '../src/model/HandGesture/Paper.ts'
 jest.mock('../src/model/Player.ts', () => {
   return {
     Player: jest.fn().mockImplementation(function (name: string) {
-      this.name = name;
+      this.name = name
       this.getHandGuesture = jest.fn()
       this.setHandGuesture = jest.fn()
       this.beats = jest.fn()

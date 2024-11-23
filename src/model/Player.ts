@@ -7,9 +7,9 @@ class Player {
   #factory: HandGestureFactory
   #name: string
 
-  constructor(name: string) {
+  constructor(name: string, handGestureFactory: HandGestureFactory) {
     this.#setName(name)
-    this.#factory = new HandGestureFactory()
+    this.#factory = handGestureFactory
   }
 
   #setName(name: string) {
