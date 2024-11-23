@@ -1,6 +1,6 @@
-import { HandGuesture } from './HandGesture/HandGesture.ts'
-import { HandGestureFactory } from './Factory/HandGuestureFactory.ts'
-import { UserChoice } from './enums/UserChoice.ts'
+import { HandGuesture } from './HandGesture/HandGesture.js'
+import { HandGestureFactory } from './Factory/HandGuestureFactory.js'
+import { UserChoice } from './enums/UserChoice.js'
 
 class Player {
   #handGuesutre: HandGuesture

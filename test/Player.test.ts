@@ -1,9 +1,9 @@
-import { Player } from '../src/model/Player'
-import { Rock } from '../src/model/HandGesture/Rock'
-import { Paper } from '../src/model/HandGesture/Paper'
-import { Scissor } from '../src/model/HandGesture/Scissor'
-import { UserChoice } from '../src/model/enums/UserChoice'
-import { HandGestureFactory } from '../src/model/Factory/HandGuestureFactory'
+import { Player } from '../src/model/Player.js'
+import { Rock } from '../src/model/HandGesture/Rock.js'
+import { Paper } from '../src/model/HandGesture/Paper.js'
+import { Scissor } from '../src/model/HandGesture/Scissor.js'
+import { UserChoice } from '../src/model/enums/UserChoice.js'
+import { HandGestureFactory } from '../src/model/Factory/HandGuestureFactory.js'
 
 jest.mock('../src/model/Factory/HandGuestureFactory', () => {
   return {

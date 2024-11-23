@@ -1,19 +1,20 @@
-import { Player } from './Player.ts'
-import { ComputerPlayer } from './ComputerPlayer.ts'
-import { GameResult } from './enums/GameResult.ts'
+import { Player } from './Player.js'
+import { ComputerPlayer } from './ComputerPlayer.js'
+import { GameResult } from './enums/GameResult.js'
+import { HandGuesture } from './HandGesture/HandGesture.js'
+import { UserChoice } from './enums/UserChoice.js'
+import { Rock } from './HandGesture/Rock.js'
+import { Scissor } from './HandGesture/Scissor.js'
 
 class Rules {
-  deternimateWinner(player: Player, computerPlayer: ComputerPlayer) {
-    const playerHand = player.getHandGuesture()
-    const computerHand = computerPlayer.getHandGuesture()
-
-    if (playerHand.beats(computerHand)) {
-      return GameResult.PLAYER
-    } else if (computerHand.beats(playerHand)) {
-      return GameResult.COMPUTER
-    } else {
-      return GameResult.TIE
+  compareGestures(handGesture, other) {
+    const rules = {
+      [UserChoice.ROCK]: UserChoice.SCISSOR,
+      [UserChoice.PAPER]: UserChoice.ROCK,
+      [UserChoice.SCISSOR]: UserChoice.PAPER
     }
+
+    return rules[handGesture.type] === other.type
   }
 }
 

@@ -2,9 +2,9 @@
  * Enum for the userinputs. If the user chooce Rock, Paper or Scissor.
  */
 enum UserChoice {
-  ROCK,
-  PAPER,
-  SCISSOR
+  ROCK = 'ROCK',
+  PAPER = 'PAPER',
+  SCISSOR = 'SCISSOR'
 }
 
 export { UserChoice }

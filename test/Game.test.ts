@@ -1,11 +1,11 @@
-import { Game } from '../src/model/Game.ts'
-import { Player } from '../src/model/Player.ts'
-import { ComputerPlayer } from '../src/model/ComputerPlayer.ts'
-import { GameResult } from '../src/model/enums/GameResult.ts'
-import { Rock } from '../src/model/HandGesture/Rock.ts'
-import { Scissor } from '../src/model/HandGesture/Scissor.ts'
-import { Paper } from '../src/model/HandGesture/Paper.ts'
-import { HandGestureFactory } from '../src/model/Factory/HandGuestureFactory.ts'
+import { Game } from '../src/model/Game.js'
+import { Player } from '../src/model/Player.js'
+import { ComputerPlayer } from '../src/model/ComputerPlayer.js'
+import { GameResult } from '../src/model/enums/GameResult.js'
+import { Rock } from '../src/model/HandGesture/Rock.js'
+import { Scissor } from '../src/model/HandGesture/Scissor.js'
+import { Paper } from '../src/model/HandGesture/Paper.js'
+import { HandGestureFactory } from '../src/model/Factory/HandGuestureFactory.js'
 
 jest.mock('../src/model/Factory/HandGuestureFactory', () => {
   return {

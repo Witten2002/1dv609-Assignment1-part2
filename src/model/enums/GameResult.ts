@@ -1,5 +1,5 @@
 export enum GameResult {
-  PLAYER,
-  COMPUTER,
-  TIE
+  PLAYER = 'PLAYER',
+  COMPUTER = 'COMPUTER',
+  TIE = 'TIE'
 }

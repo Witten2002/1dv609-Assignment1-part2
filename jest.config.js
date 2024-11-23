@@ -1,9 +1,12 @@
 export default {
-  preset: 'ts-jest',
+  preset: 'ts-jest/presets/js-with-ts-esm',
   testEnvironment: 'node',
-  verbose: true,
-  collectCoverage: true,
-  coverageDirectory: 'coverage',
-  testMatch: ['**/*.test.ts'],
-  moduleFileExtensions: ['ts', 'js'],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  moduleNameMapper: {
+    '^(\\.{1,2}/.*)\\.js$': '$1',
+  },
+  transform: {
+    '^.+\\.tsx?$': 'ts-jest',
+  },
+  testMatch: ['**/test/**/*.test.ts'],
 };

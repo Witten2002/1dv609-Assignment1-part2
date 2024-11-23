@@ -1,6 +1,6 @@
-import { Player } from './Player.ts'
-import { ComputerPlayer } from './ComputerPlayer.ts'
-import { GameResult } from './enums/GameResult.ts'
+import { Player } from './Player.js'
+import { ComputerPlayer } from './ComputerPlayer.js'
+import { GameResult } from './enums/GameResult.js'
 
 class Game {
   deternimateWinner(player: Player, computerPlayer: ComputerPlayer) {

@@ -1,8 +1,9 @@
 import { ComputerPlayer } from '../src/model/ComputerPlayer'
-import { Paper } from '../src/model/HandGesture/Paper'
-import { Rock } from '../src/model/HandGesture/Rock'
-import { Scissor } from '../src/model/HandGesture/Scissor'
-import { HandGestureFactory } from '../src/model/Factory/HandGuestureFactory'
+import { Paper } from '../src/model/HandGesture/Paper.js'
+import { Rock } from '../src/model/HandGesture/Rock.js'
+import { Scissor } from '../src/model/HandGesture/Scissor.js'
+import { HandGestureFactory } from '../src/model/Factory/HandGuestureFactory.js'
+import { HandGuesture } from '../src/model/HandGesture/HandGesture.js'
 
 jest.mock('../src/model/Factory/HandGuestureFactory', () => {
   return {
@@ -14,7 +15,7 @@ jest.mock('../src/model/Factory/HandGuestureFactory', () => {
 
 describe('ComputerPlayer Under Test', () => {
   let sut: ComputerPlayer
-  let expected
+  let expected: HandGuesture[]
   let handGestureFactory: HandGestureFactory
 
   beforeEach(() => {
@@ -26,7 +27,7 @@ describe('ComputerPlayer Under Test', () => {
   const setUpTest = (numOfRounds) => {
     const spyGenerateRandomHandGesture = jest.spyOn(sut, 'generateRandomHandGesture')
 
-    const actualValues = new Set()
+    const actualValues: HandGuesture[] = []
     const expectedReturnValues = [new Rock(), new Paper(), new Scissor()]
 
     for (let i = 0; i < numOfRounds; i++) { 
@@ -35,7 +36,7 @@ describe('ComputerPlayer Under Test', () => {
       sut.generateRandomHandGesture()
       const actual = sut.getHandGuesture()
 
-      actualValues.add(actual)
+      actualValues.push(actual)
     }
 
     expect(spyGenerateRandomHandGesture).toHaveBeenCalled()
@@ -48,7 +49,15 @@ describe('ComputerPlayer Under Test', () => {
   test('ComputerPlayer should generate a valid random UserChoice', () => {
     const actual = setUpTest(1)
 
-    expect([...actual]).toEqual(expect.arrayContaining(expected))
+    let present = false
+
+    for (const handGesture of expected) {
+      if (actual[0] instanceof handGesture.constructor) {
+        present = true
+      }
+    }
+
+    expect(present).toBe(true)
   })
 
   test('ComputerPlayer should generate valid random UserChoices', () => {

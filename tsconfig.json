@@ -2,11 +2,12 @@
   "compilerOptions": {
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "target": "ES2023",
+    "target": "ES6",
     "sourceMap": true,
     "outDir": "dist",
-    "allowImportingTsExtensions": true,
-    "noEmit": true
+    "allowImportingTsExtensions": false,
+    "noEmit": false
   },
   "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"],
 }

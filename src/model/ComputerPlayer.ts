@@ -1,6 +1,6 @@
-import { UserChoice } from './enums/UserChoice.ts'
-import { Player } from './Player.ts'
-import { HandGestureFactory } from './Factory/HandGuestureFactory.ts'
+import { UserChoice } from './enums/UserChoice.js'
+import { Player } from './Player.js'
+import { HandGestureFactory } from './Factory/HandGuestureFactory.js'
 
 class ComputerPlayer extends Player {
   constructor(handgestureFactory: HandGestureFactory) {
@@ -8,7 +8,7 @@ class ComputerPlayer extends Player {
   }
 
   generateRandomHandGesture(): void {
-    const userChoices = Object.values(UserChoice).filter(value => typeof value === 'number') as UserChoice[];
+    const userChoices = Object.values(UserChoice) as UserChoice[]
     const random = Math.floor(Math.random() * userChoices.length)
 
     const computerChoice = userChoices[random]

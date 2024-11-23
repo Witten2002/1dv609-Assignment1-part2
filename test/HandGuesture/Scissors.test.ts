@@ -1,6 +1,6 @@
-import { Scissor } from '../../src/model/HandGesture/Scissor'
-import { Rock } from '../../src/model/HandGesture/Rock'
-import { Paper } from '../../src/model/HandGesture/Paper'
+import { Scissor } from '../../src/model/HandGesture/Scissor.js'
+import { Rock } from '../../src/model/HandGesture/Rock.js'
+import { Paper } from '../../src/model/HandGesture/Paper.js'
 
 describe('Scissors Under Test', () => {
   const setUpTest = (param) => {
