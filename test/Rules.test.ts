@@ -5,6 +5,15 @@ import { GameResult } from '../src/model/enums/GameResult.ts'
 import { Rock } from '../src/model/HandGesture/Rock.ts'
 import { Scissor } from '../src/model/HandGesture/Scissor.ts'
 import { Paper } from '../src/model/HandGesture/Paper.ts'
+import { HandGestureFactory } from '../src/model/Factory/HandGuestureFactory'
+
+jest.mock('../src/model/Factory/HandGuestureFactory', () => {
+  return {
+    HandGestureFactory: jest.fn().mockImplementation(function () {
+      this.createHandGuesture = jest.fn()
+    })
+  }
+})
 
 jest.mock('../src/model/Player.ts', () => {
   return {
@@ -33,7 +42,8 @@ describe('Rules Under Test', () => {
 
   beforeEach(() => {
     sut = new Rules()
-    player = new Player('Player')
+    const handGestureFactory = new HandGestureFactory()
+    player = new Player('Player', handGestureFactory)
     computerPlayer = new ComputerPlayer()
 
     jest.clearAllMocks()
