@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1732538913934" clover="3.2.0">
-  <project timestamp="1732538913934" name="All files">
+<coverage generated="1732539073927" clover="3.2.0">
+  <project timestamp="1732539073927" name="All files">
     <metrics statements="68" coveredstatements="68" conditionals="14" coveredconditionals="14" methods="19" coveredmethods="19" elements="101" coveredelements="101" complexity="0" loc="68" ncloc="68" packages="4" files="10" classes="10"/>
     <package name="model">
       <metrics statements="36" coveredstatements="36" conditionals="7" coveredconditionals="7" methods="10" coveredmethods="10"/>
@@ -48,8 +48,8 @@
       <file name="Rules.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\Rules.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="8" type="stmt"/>
-        <line num="5" count="28" type="stmt"/>
-        <line num="11" count="28" type="stmt"/>
+        <line num="5" count="30" type="stmt"/>
+        <line num="11" count="30" type="stmt"/>
         <line num="15" count="8" type="stmt"/>
       </file>
     </package>

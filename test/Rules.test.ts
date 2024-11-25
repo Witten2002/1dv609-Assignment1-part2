@@ -121,8 +121,24 @@ describe('Rules Under Test', () => {
     expect(actual).toBe(expected)
   })
 
-  test('Player Loses Scissor Vs Scissor', () => {
-    const actual = setUpTest(scissor, scissor)
+  test('Player Loses Scissor Vs Rock', () => {
+    const actual = setUpTest(scissor, rock)
+
+    const expected = false
+
+    expect(actual).toBe(expected)
+  })
+
+  test('Player Loses Rock Vs Paper', () => {
+    const actual = setUpTest(rock, paper)
+
+    const expected = false
+
+    expect(actual).toBe(expected)
+  })
+
+  test('Player Loses Paper Vs Scissor', () => {
+    const actual = setUpTest(paper, scissor)
 
     const expected = false
 
