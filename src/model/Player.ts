@@ -28,6 +28,7 @@ class Player {
   getName(): String {
     return this.#name
   }
+
   setHandGuesture(userChoice: UserChoice) {
     this.#handGuesutre = this.#factory.createHandGuesture(userChoice)
   }

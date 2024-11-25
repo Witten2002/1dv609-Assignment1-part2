@@ -8,45 +8,16 @@ import { Paper } from '../src/model/HandGesture/Paper.js'
 import { HandGestureFactory } from '../src/model/Factory/HandGuestureFactory.js'
 import { UserChoice } from '../src/model/enums/UserChoice.js'
 
-jest.mock('../src/model/Factory/HandGuestureFactory', () => {
-  return {
-    HandGestureFactory: jest.fn().mockImplementation(function () {
-      this.createHandGuesture = jest.fn()
-    })
-  }
-})
-
-jest.mock('../src/model/Player.ts', () => {
-  return {
-    Player: jest.fn().mockImplementation(function (name: string) {
-      this.name = name
-      this.getHandGuesture = jest.fn()
-      this.setHandGuesture = jest.fn()
-    }),
-  }
-})
-
-jest.mock('../src/model/ComputerPlayer.ts', () => {
-  return {
-    ComputerPlayer: jest.fn().mockImplementation(function () {
-      Player.call(this, 'ComputerPlayer')
-      this.setHandGuesture = jest.fn()
-    }),
-  }
-})
-
 describe('Rules Under Test', () => {
   let sut: Game
   let player: Player
   let computerPlayer: ComputerPlayer
 
   beforeEach(() => {
-    sut = new Game()
     const handGestureFactory = new HandGestureFactory()
     player = new Player('Player', handGestureFactory)
     computerPlayer = new ComputerPlayer(handGestureFactory)
-
-    jest.clearAllMocks()
+    sut = new Game(player, computerPlayer)
   })
 
   const setUpTest = (playerHandGesture, computeHandGesture) => {
@@ -55,7 +26,7 @@ describe('Rules Under Test', () => {
   
     const spy = jest.spyOn(sut, 'deternimateWinner')
   
-    const actual = sut.deternimateWinner(player, computerPlayer)
+    const actual = sut.deternimateWinner()
   
     expect(spy).toHaveBeenCalled()
     expect(player.getHandGuesture).toHaveBeenCalled()
@@ -137,26 +108,46 @@ describe('Rules Under Test', () => {
     expect(actual).toBe(expected)
   })
 
-  test('Test To Start A Game', () => {
-    const spyPlayerSet = jest.spyOn(player, 'setHandGuesture')
-    const spyPlayerGet = jest.spyOn(player, 'getHandGuesture')
-    
-    const spyComputerSet = jest.spyOn(computerPlayer, 'setHandGuesture')
-    const spyComputerGet = jest.spyOn(computerPlayer, 'getHandGuesture')
-    const spyComputerRandom = jest.spyOn(computerPlayer, 'getHandGuesture')
-
+  test('Should return the correct player Hand Rock. Also Test StartGame Method', () => {
     sut.startGame(UserChoice.ROCK)
 
-    expect(spyPlayerSet).toHaveBeenCalled()
-    expect(spyPlayerGet).toHaveBeenCalled()
-    expect(spyComputerSet).toHaveBeenCalled()
-    expect(spyComputerGet).toHaveBeenCalled()
-    expect(spyComputerRandom).toHaveBeenCalled()
+    const playerInstace = sut.getPlayer()
 
-    expect(player.setHandGuesture).toHaveBeenCalled()
-    expect(player.getHandGuesture).toHaveBeenCalled()
-    expect(computerPlayer.setHandGuesture).toHaveBeenCalled()
-    expect(computerPlayer.getHandGuesture).toHaveBeenCalled()
-    expect(computerPlayer.generateRandomHandGesture).toHaveBeenCalled()
+    const actual = playerInstace.getHandGuesture()
+
+    const expected = new Rock()
+
+    expect(actual).toStrictEqual(expected)
+  })
+
+  
+  test('Should not crash', () => {
+    sut.startGame(UserChoice.ROCK)
+
+    const actual = sut.deternimateWinner()
+
+    const expected = [GameResult.COMPUTER, GameResult.PLAYER, GameResult.TIE]
+
+    let exist = false
+
+    for (const result of expected) {
+      if (result === actual) {
+        exist = true
+      }
+    }
+
+    expect(exist).toBe(true)
+  })
+
+  test('Should return the correct ComputerPlayer Hand Rock.', () => {
+    sut.startGame(UserChoice.SCISSOR)
+
+    const computerInstace = sut.getComputerPlayer()
+
+    const actual = computerInstace.getHandGuesture()
+
+    const expected = new Scissor()
+
+    expect(actual).toStrictEqual(expected)
   })
 })

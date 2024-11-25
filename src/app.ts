@@ -17,11 +17,19 @@ const rules = new Rules ()
 
 // const result = rock.beats(scissor)
 
-const game = new Game()
-const player = new Player('player 1', new HandGestureFactory())
-const computer = new ComputerPlayer(new HandGestureFactory())
+const handGestureFactory = new HandGestureFactory()
+
+const player = new Player('Player', handGestureFactory)
+const computer = new ComputerPlayer(handGestureFactory)
+const game = new Game(player, computer)
+// const player = new Player('player 1', new HandGestureFactory())
+// const computer = new ComputerPlayer(new HandGestureFactory())
 
 player.setHandGuesture(UserChoice.ROCK)
 computer.generateRandomHandGesture()
 
-const result = game.deternimateWinner(player, computer)
+console.log(player.getHandGuesture())
+
+const result = game.deternimateWinner()
+
+console.log(result)
