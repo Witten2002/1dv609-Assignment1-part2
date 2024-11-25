@@ -44,7 +44,7 @@ Game --> Player
 Game --> ComputerPlayer
 
 class Rules {
-  rules
+  compareGestures(Player: player, ComputerPlayer: computer) Boolean
 }
 
 Rules <-- Game

@@ -6,6 +6,7 @@ import { Rock } from '../src/model/HandGesture/Rock.js'
 import { Scissor } from '../src/model/HandGesture/Scissor.js'
 import { Paper } from '../src/model/HandGesture/Paper.js'
 import { HandGestureFactory } from '../src/model/Factory/HandGuestureFactory.js'
+import { UserChoice } from '../src/model/enums/UserChoice.js'
 
 jest.mock('../src/model/Factory/HandGuestureFactory', () => {
   return {
@@ -134,5 +135,28 @@ describe('Rules Under Test', () => {
     const expected = GameResult.COMPUTER
 
     expect(actual).toBe(expected)
+  })
+
+  test('Test To Start A Game', () => {
+    const spyPlayerSet = jest.spyOn(player, 'setHandGuesture')
+    const spyPlayerGet = jest.spyOn(player, 'getHandGuesture')
+    
+    const spyComputerSet = jest.spyOn(computerPlayer, 'setHandGuesture')
+    const spyComputerGet = jest.spyOn(computerPlayer, 'getHandGuesture')
+    const spyComputerRandom = jest.spyOn(computerPlayer, 'getHandGuesture')
+
+    sut.startGame(UserChoice.ROCK)
+
+    expect(spyPlayerSet).toHaveBeenCalled()
+    expect(spyPlayerGet).toHaveBeenCalled()
+    expect(spyComputerSet).toHaveBeenCalled()
+    expect(spyComputerGet).toHaveBeenCalled()
+    expect(spyComputerRandom).toHaveBeenCalled()
+
+    expect(player.setHandGuesture).toHaveBeenCalled()
+    expect(player.getHandGuesture).toHaveBeenCalled()
+    expect(computerPlayer.setHandGuesture).toHaveBeenCalled()
+    expect(computerPlayer.getHandGuesture).toHaveBeenCalled()
+    expect(computerPlayer.generateRandomHandGesture).toHaveBeenCalled()
   })
 })
