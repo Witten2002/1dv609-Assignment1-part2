@@ -21,7 +21,6 @@ jest.mock('../src/model/Player.ts', () => {
       this.name = name
       this.getHandGuesture = jest.fn()
       this.setHandGuesture = jest.fn()
-      this.beats = jest.fn()
     }),
   }
 })
