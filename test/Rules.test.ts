@@ -144,4 +144,28 @@ describe('Rules Under Test', () => {
 
     expect(actual).toBe(expected)
   })
+
+  test('Tie Paper Vs Paper', () => {
+    const actual = setUpTest(paper, paper)
+
+    const expected = false
+
+    expect(actual).toBe(expected)
+  })
+
+  test('Tie Rock Vs Rock', () => {
+    const actual = setUpTest(rock, rock)
+
+    const expected = false
+
+    expect(actual).toBe(expected)
+  })
+  
+  test('Tie Scissor Vs Scissor', () => {
+    const actual = setUpTest(scissor, scissor)
+
+    const expected = false
+
+    expect(actual).toBe(expected)
+  })
 })
