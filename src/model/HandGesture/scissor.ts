@@ -1,7 +1,6 @@
 import { UserChoice } from '../enums/UserChoice.js'
 import { Rules } from '../Rules.js'
 import { HandGuesture } from './HandGesture.js'
-import { Paper } from './Paper.js'
 
 class Scissor implements HandGuesture {
   type: UserChoice
