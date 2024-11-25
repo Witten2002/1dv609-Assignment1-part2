@@ -7,7 +7,13 @@ import { Scissor } from '../../src/model/HandGesture/Scissor.js'
 describe('HandGestureFactory Under Test', () => {
   const setUpTest = (param) => {
     const sut = new HandGestureFactory()
+
+    const spy = jest.spyOn(sut, 'createHandGuesture')
+
     const actual = sut.createHandGuesture(param)
+
+    expect(spy).toHaveBeenCalled()
+    expect(sut.createHandGuesture).toHaveBeenCalled()
 
     return actual
   }
