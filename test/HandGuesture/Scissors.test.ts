@@ -28,11 +28,6 @@ describe('Scissors Under Test', () => {
     sut = new Scissor()
     rock = new Rock()
     paper = new Paper()
-
-    
-    console.log(sut.type)
-    console.log(rock.type)
-    console.log(paper.type)
   })
 
   const setUpTest = (handGesture) => {
