@@ -120,4 +120,12 @@ describe('Rules Under Test', () => {
 
     expect(actual).toBe(expected)
   })
+
+  test('Player Loses Scissor Vs Scissor', () => {
+    const actual = setUpTest(scissor, scissor)
+
+    const expected = false
+
+    expect(actual).toBe(expected)
+  })
 })
