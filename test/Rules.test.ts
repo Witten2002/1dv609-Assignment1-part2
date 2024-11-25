@@ -78,20 +78,43 @@ describe('Rules Under Test', () => {
   })
 
   const setUpTest = (playerHandGesture, computerHandGesture) => {
-    const playerHand = player.getHandGuesture = jest.fn().mockReturnValue(playerHandGesture)
-    const computerHand = computer.getHandGuesture = jest.fn().mockReturnValue(computerHandGesture)
+    const spyPlayerHand = jest.spyOn(player, 'getHandGuesture').mockReturnValue(playerHandGesture)
+    const spyComputerHand = jest.spyOn(computer, 'getHandGuesture').mockReturnValue(computerHandGesture)
+    const playerHand = player.getHandGuesture()
+    const computerHand = computer.getHandGuesture()
     const spy = jest.spyOn(sut, 'compareGestures')
 
     const actual = sut.compareGestures(playerHand, computerHand)
 
     expect(spy).toHaveBeenCalled()
+    expect(spyPlayerHand).toHaveBeenCalled()
+    expect(spyComputerHand).toHaveBeenCalled()
+    
     expect(sut.compareGestures).toHaveBeenCalled()
+    expect(player.getHandGuesture).toHaveBeenCalled()
+    expect(computer.getHandGuesture).toHaveBeenCalled()
 
     return actual
   }
 
   test('Player wins Rock Vs Scissor', () => {
     const actual = setUpTest(rock, scissor)
+
+    const expected = true
+
+    expect(actual).toBe(expected)
+  })
+
+  test('Player wins Paper Vs Rock', () => {
+    const actual = setUpTest(paper, rock)
+
+    const expected = true
+
+    expect(actual).toBe(expected)
+  })
+
+  test('Player wins Scissor Vs Paper', () => {
+    const actual = setUpTest(scissor, paper)
 
     const expected = true
 
