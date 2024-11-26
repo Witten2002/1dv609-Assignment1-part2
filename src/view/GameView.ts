@@ -8,6 +8,10 @@ class GameView {
   }
 
   chooseHand() {
+
+  }
+
+  showResult() {
     
   }
 }

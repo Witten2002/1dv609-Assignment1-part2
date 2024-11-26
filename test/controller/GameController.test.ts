@@ -80,4 +80,14 @@ describe('GameController Under Test', () => {
 
     expect(game.deternimateWinner).toHaveBeenCalled()
   })
+
+  test('Should call the method showResult on view', () => {
+    const spy = jest.spyOn(view, 'showResult')
+
+    sut.start()
+
+    expect(spy).toHaveBeenCalled()
+
+    expect(view.showResult).toHaveBeenCalled()
+  })
 })
