@@ -10,9 +10,7 @@ class GameController {
   }
 
   start() {
-    const game = new Game()
 
-    game.startGame(UserChoice.ROCK)
   }
 }
 
