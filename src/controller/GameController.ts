@@ -16,6 +16,7 @@ class GameController {
     const playerChoice = this.#view.chooseHand()
 
     this.#game.startGame(playerChoice)
+    this.#game.deternimateWinner()
   }
 }
 
