@@ -23,8 +23,8 @@ describe('GameView Under Test', () => {
   test('should promt all different gestures', () => {
     sut.chooseHand()
 
-    expect(spy).toHaveBeenCalledWith('ROCK')
-    expect(spy).toHaveBeenCalledWith('PAPER')
-    expect(spy).toHaveBeenCalledWith('SCISSOR')
+    expect(spy).toHaveBeenCalledWith('1. ROCK')
+    expect(spy).toHaveBeenCalledWith('2. PAPER')
+    expect(spy).toHaveBeenCalledWith('3. SCISSOR')
   })
 })

@@ -1,3 +1,5 @@
+import { UserChoice } from "../model/enums/UserChoice.js"
+
 class GameView {
   #clearConsole() {
 
@@ -10,7 +12,14 @@ class GameView {
   }
 
   chooseHand() {
-    
+    const gestures = Array.from(Object.values(UserChoice))
+
+    for (let i = 0; i < gestures.length; i++) {
+      let index = i
+      index++
+
+      console.log(`${index}. ${gestures[i]}`)
+    }
   }
 
   showResult() {
