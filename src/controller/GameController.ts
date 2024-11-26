@@ -12,6 +12,7 @@ class GameController {
   start() {
     this.#view.startGameMessage()
     
+    this.#view.chooseHand()
   }
 }
 

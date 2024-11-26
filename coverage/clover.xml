@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1732629194873" clover="3.2.0">
-  <project timestamp="1732629194873" name="All files">
-    <metrics statements="80" coveredstatements="80" conditionals="14" coveredconditionals="14" methods="23" coveredmethods="23" elements="117" coveredelements="117" complexity="0" loc="80" ncloc="80" packages="4" files="10" classes="10"/>
+<coverage generated="1732629258396" clover="3.2.0">
+  <project timestamp="1732629258396" name="All files">
+    <metrics statements="87" coveredstatements="86" conditionals="14" coveredconditionals="14" methods="28" coveredmethods="25" elements="129" coveredelements="125" complexity="0" loc="87" ncloc="87" packages="6" files="12" classes="12"/>
+    <package name="controller">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="GameController.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\controller\GameController.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+      </file>
+    </package>
     <package name="model">
       <metrics statements="48" coveredstatements="48" conditionals="7" coveredconditionals="7" methods="14" coveredmethods="14"/>
       <file name="ComputerPlayer.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\ComputerPlayer.ts">
@@ -74,9 +85,9 @@
         <line num="4" count="2" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
         <line num="18" count="9" type="cond" truecount="3" falsecount="0"/>
-        <line num="20" count="3" type="stmt"/>
-        <line num="22" count="3" type="stmt"/>
-        <line num="24" count="3" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
         <line num="29" count="2" type="stmt"/>
       </file>
     </package>
@@ -86,7 +97,7 @@
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="5" type="stmt"/>
         <line num="2" count="5" type="stmt"/>
-        <line num="10" count="24" type="stmt"/>
+        <line num="10" count="23" type="stmt"/>
         <line num="19" count="9" type="stmt"/>
         <line num="23" count="5" type="stmt"/>
       </file>
@@ -94,7 +105,7 @@
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="5" type="stmt"/>
         <line num="2" count="5" type="stmt"/>
-        <line num="10" count="25" type="stmt"/>
+        <line num="10" count="27" type="stmt"/>
         <line num="19" count="9" type="stmt"/>
         <line num="23" count="5" type="stmt"/>
       </file>
@@ -102,7 +113,7 @@
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="5" type="stmt"/>
         <line num="2" count="5" type="stmt"/>
-        <line num="9" count="20" type="stmt"/>
+        <line num="9" count="19" type="stmt"/>
         <line num="19" count="8" type="stmt"/>
         <line num="23" count="5" type="stmt"/>
       </file>
@@ -122,6 +133,14 @@
         <line num="5" count="8" type="stmt"/>
         <line num="6" count="8" type="stmt"/>
         <line num="7" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="view">
+      <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="GameView.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\view\GameView.ts">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
       </file>
     </package>
   </project>
