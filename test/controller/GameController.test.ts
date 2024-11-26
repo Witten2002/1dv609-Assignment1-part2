@@ -24,4 +24,12 @@ describe('GameController Under Test', () => {
 
     expect(view.startGameMessage).toHaveBeenCalled()
   })
+
+  test('Should call the mwthod chooseHand on view when initzialized', () => {
+    const spy = jest.spyOn(view, 'chooseHand')
+
+    expect(spy).toHaveBeenCalled()
+
+    expect(view.chooseHand).toHaveBeenCalled()
+  })
 })
