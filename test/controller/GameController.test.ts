@@ -32,8 +32,8 @@ describe('GameController Under Test', () => {
 
   beforeAll(() => {
     view = new GameView()
-    sut = new GameController(view)
     game = new Game()
+    sut = new GameController(view, game)
   })
 
   test('Should initzalize a view', () => {
@@ -52,6 +52,8 @@ describe('GameController Under Test', () => {
   test('Should call the method chooseHand on view when initzialized', () => {
     const spy = jest.spyOn(view, 'chooseHand')
 
+    sut.start()
+
     expect(spy).toHaveBeenCalled()
 
     expect(view.chooseHand).toHaveBeenCalled()
@@ -60,6 +62,8 @@ describe('GameController Under Test', () => {
   
   test('Should call the method startGame on Game with correct arguments', () => {
     const spy = jest.spyOn(game, 'startGame')
+
+    sut.start()
 
     expect(spy).toHaveBeenCalled()
 

@@ -4,15 +4,18 @@ import { GameView } from '../view/GameView.js'
 
 class GameController {
   #view
+  #game
 
-  constructor( view: GameView) {
+  constructor( view: GameView, game: Game) {
     this.#view = view
+    this.#game = game
   }
 
   start() {
     this.#view.startGameMessage()
-    
-    this.#view.chooseHand()
+    const playerChoice = this.#view.chooseHand()
+
+    this.#game.startGame(playerChoice)
   }
 }
 
