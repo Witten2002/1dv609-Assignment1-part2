@@ -5,7 +5,6 @@ import { GameResult } from '../../src/model/enums/GameResult.js'
 import { Rock } from '../../src/model/HandGesture/Rock.js'
 import { Scissor } from '../../src/model/HandGesture/Scissor.js'
 import { Paper } from '../../src/model/HandGesture/Paper.js'
-import { HandGestureFactory } from '../../src/model/Factory/HandGuestureFactory.js'
 import { UserChoice } from '../../src/model/enums/UserChoice.js'
 
 describe('Rules Under Test', () => {

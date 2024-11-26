@@ -1,3 +1,4 @@
+import { UserChoice } from '../model/enums/UserChoice.js'
 import { Game } from '../model/Game.js'
 import { GameView } from '../view/GameView.js'
 
@@ -9,6 +10,9 @@ class GameController {
   }
 
   start() {
+    const game = new Game()
+
+    game.startGame(UserChoice.ROCK)
   }
 }
 
