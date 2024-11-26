@@ -10,7 +10,7 @@ class GameController {
   }
 
   start() {
-
+    this.#view.startGameMessage()
   }
 }
 

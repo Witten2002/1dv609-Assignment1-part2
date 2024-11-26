@@ -1,7 +1,5 @@
 import { GameController } from '../../src/controller/GameController'
 import { GameView } from '../../src/view/GameView'
-import { Game } from '../../src/model/Game'
-import { UserChoice } from '../../src/model/enums/UserChoice'
 
 jest.mock('../../src/view/GameView')
 
