@@ -10,6 +10,7 @@ jest.mock('../../src/view/GameView', () => {
       this.startGameMessage = jest.fn()
       this.chooseHand = jest.fn().mockReturnValue(UserChoice.ROCK)
       this.showResult = jest.fn()
+      this.askRestart = jest.fn()
     })
   }
 })
@@ -90,5 +91,16 @@ describe('GameController Under Test', () => {
     expect(spy).toHaveBeenCalled()
 
     expect(view.showResult).toHaveBeenCalled()
+  })
+
+  
+  test('Should call the method askRestart on view', () => {
+    const spy = jest.spyOn(view, 'askRestart')
+
+    sut.start()
+
+    expect(spy).toHaveBeenCalled()
+
+    expect(view.askRestart).toHaveBeenCalled()
   })
 })

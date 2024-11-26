@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1732637686224" clover="3.2.0">
-  <project timestamp="1732637686224" name="All files">
+<coverage generated="1732637850888" clover="3.2.0">
+  <project timestamp="1732637850888" name="All files">
     <metrics statements="90" coveredstatements="90" conditionals="14" coveredconditionals="14" methods="25" coveredmethods="25" elements="129" coveredelements="129" complexity="0" loc="90" ncloc="90" packages="5" files="11" classes="11"/>
     <package name="controller">
       <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
@@ -10,11 +10,11 @@
         <line num="7" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
-        <line num="15" count="4" type="stmt"/>
-        <line num="16" count="4" type="stmt"/>
-        <line num="18" count="4" type="stmt"/>
-        <line num="19" count="4" type="stmt"/>
-        <line num="21" count="4" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="16" count="6" type="stmt"/>
+        <line num="18" count="6" type="stmt"/>
+        <line num="19" count="6" type="stmt"/>
+        <line num="21" count="6" type="stmt"/>
         <line num="25" count="1" type="stmt"/>
       </file>
     </package>
@@ -49,9 +49,9 @@
         <line num="31" count="10" type="stmt"/>
         <line num="32" count="10" type="stmt"/>
         <line num="34" count="10" type="cond" truecount="2" falsecount="0"/>
-        <line num="35" count="4" type="stmt"/>
-        <line num="36" count="6" type="cond" truecount="2" falsecount="0"/>
-        <line num="37" count="3" type="stmt"/>
+        <line num="35" count="3" type="stmt"/>
+        <line num="36" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="37" count="4" type="stmt"/>
         <line num="39" count="3" type="stmt"/>
         <line num="44" count="1" type="stmt"/>
       </file>
@@ -76,8 +76,8 @@
       <file name="Rules.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\Rules.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="8" type="stmt"/>
-        <line num="5" count="34" type="stmt"/>
-        <line num="11" count="34" type="stmt"/>
+        <line num="5" count="35" type="stmt"/>
+        <line num="11" count="35" type="stmt"/>
         <line num="15" count="8" type="stmt"/>
       </file>
     </package>
@@ -91,8 +91,8 @@
         <line num="5" count="2" type="stmt"/>
         <line num="18" count="9" type="cond" truecount="3" falsecount="0"/>
         <line num="20" count="3" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="24" count="5" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
         <line num="29" count="2" type="stmt"/>
       </file>
     </package>
@@ -102,8 +102,8 @@
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="5" type="stmt"/>
         <line num="2" count="5" type="stmt"/>
-        <line num="10" count="22" type="stmt"/>
-        <line num="19" count="8" type="stmt"/>
+        <line num="10" count="25" type="stmt"/>
+        <line num="19" count="9" type="stmt"/>
         <line num="23" count="5" type="stmt"/>
       </file>
       <file name="Rock.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\HandGesture\Rock.ts">
@@ -118,7 +118,7 @@
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="5" type="stmt"/>
         <line num="2" count="5" type="stmt"/>
-        <line num="9" count="22" type="stmt"/>
+        <line num="9" count="19" type="stmt"/>
         <line num="19" count="8" type="stmt"/>
         <line num="23" count="5" type="stmt"/>
       </file>

@@ -14,6 +14,10 @@ class GameView {
   showResult() {
 
   }
+
+  askRestart() {
+    
+  }
 }
 
 export { GameView }
