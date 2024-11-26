@@ -1,15 +1,39 @@
 import { GameController } from '../../src/controller/GameController'
+import { UserChoice } from '../../src/model/enums/UserChoice'
 import { GameView } from '../../src/view/GameView'
+import { Game } from '../../src/model/Game'
 
-jest.mock('../../src/view/GameView')
+
+jest.mock('../../src/view/GameView', () => {
+  return {
+    GameView: jest.fn().mockImplementation(function () {
+      this.startGameMessage = jest.fn()
+      this.chooseHand = jest.fn().mockReturnValue(UserChoice.ROCK)
+    })
+  }
+})
+
+jest.mock('../../src/model/Game', () => {
+  return {
+    Game: jest.fn().mockImplementation(() => {
+      return {
+        startGame: jest.fn(),
+        getPlayerHand: jest.fn(),
+        deternimateWinner: jest.fn()
+      }
+    })
+  }
+})
 
 describe('GameController Under Test', () => {
   let view: GameView
   let sut: GameController
+  let game: Game
 
   beforeAll(() => {
     view = new GameView()
     sut = new GameController(view)
+    game = new Game()
   })
 
   test('Should initzalize a view', () => {
@@ -25,11 +49,20 @@ describe('GameController Under Test', () => {
     expect(view.startGameMessage).toHaveBeenCalled()
   })
 
-  test('Should call the mwthod chooseHand on view when initzialized', () => {
+  test('Should call the method chooseHand on view when initzialized', () => {
     const spy = jest.spyOn(view, 'chooseHand')
 
     expect(spy).toHaveBeenCalled()
 
     expect(view.chooseHand).toHaveBeenCalled()
+  })
+
+  
+  test('Should call the method startGame on Game with correct arguments', () => {
+    const spy = jest.spyOn(game, 'startGame')
+
+    expect(spy).toHaveBeenCalled()
+
+    expect(game.startGame).toHaveBeenCalledWith(UserChoice.ROCK)
   })
 })
