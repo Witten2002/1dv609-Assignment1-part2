@@ -2,6 +2,7 @@ import { GameController } from '../../src/controller/GameController'
 import { UserChoice } from '../../src/model/enums/UserChoice'
 import { GameView } from '../../src/view/GameView'
 import { Game } from '../../src/model/Game'
+import { Menu } from '../../src/model/enums/Menu'
 
 
 jest.mock('../../src/view/GameView', () => {
@@ -100,6 +101,17 @@ describe('GameController Under Test', () => {
     sut.start()
 
     expect(spy).toHaveBeenCalled()
+
+    expect(view.askRestart).toHaveBeenCalled()
+  })
+
+  test('Should call the method start on gameController when user want to restart', () => {
+    view.askRestart = jest.fn().mockReturnValue(Menu.RESTART)
+    const spy = jest.spyOn(sut, 'start')
+
+    sut.start()
+
+    expect(spy).toHaveBeenCalledTimes(2)
 
     expect(view.askRestart).toHaveBeenCalled()
   })

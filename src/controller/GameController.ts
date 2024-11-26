@@ -19,6 +19,8 @@ class GameController {
     this.#game.deternimateWinner()
 
     this.#view.showResult()
+
+    this.#view.askRestart()
   }
 }
 
