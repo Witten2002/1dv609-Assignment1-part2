@@ -106,7 +106,7 @@ describe('GameController Under Test', () => {
   })
 
   test('Should call the method start on gameController when user want to restart', () => {
-    view.askRestart = jest.fn().mockReturnValue(Menu.RESTART)
+    view.askRestart = jest.fn().mockReturnValueOnce(Menu.RESTART)
     const spy = jest.spyOn(sut, 'start')
 
     sut.start()

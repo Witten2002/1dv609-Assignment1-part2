@@ -1,3 +1,4 @@
+import { Menu } from '../model/enums/Menu.js'
 import { UserChoice } from '../model/enums/UserChoice.js'
 import { Game } from '../model/Game.js'
 import { GameView } from '../view/GameView.js'
@@ -12,6 +13,8 @@ class GameController {
   }
 
   start() {
+    let userWants = Menu.QUIT
+
     this.#view.startGameMessage()
     const playerChoice = this.#view.chooseHand()
 
@@ -20,7 +23,11 @@ class GameController {
 
     this.#view.showResult()
 
-    this.#view.askRestart()
+    userWants = this.#view.askRestart()
+
+    if (userWants === Menu.RESTART) {
+      this.start()
+    }
   }
 }
 
