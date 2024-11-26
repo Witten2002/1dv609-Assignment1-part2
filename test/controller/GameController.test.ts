@@ -42,6 +42,7 @@ describe('GameController Under Test', () => {
 
   test('Should call startGameMessage on view when initzialized', () => {
     const spy = jest.spyOn(view, 'startGameMessage')
+
     sut.start()
 
     expect(spy).toHaveBeenCalled()
@@ -68,5 +69,15 @@ describe('GameController Under Test', () => {
     expect(spy).toHaveBeenCalled()
 
     expect(game.startGame).toHaveBeenCalledWith(UserChoice.ROCK)
+  })
+
+  test('Should call the method determinateWinner on Game', () => {
+    const spy = jest.spyOn(game, 'deternimateWinner')
+
+    sut.start()
+
+    expect(spy).toHaveBeenCalled()
+
+    expect(game.deternimateWinner).toHaveBeenCalled()
   })
 })
