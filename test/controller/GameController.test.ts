@@ -9,6 +9,7 @@ jest.mock('../../src/view/GameView', () => {
     GameView: jest.fn().mockImplementation(function () {
       this.startGameMessage = jest.fn()
       this.chooseHand = jest.fn().mockReturnValue(UserChoice.ROCK)
+      this.showResult = jest.fn()
     })
   }
 })

@@ -17,6 +17,8 @@ class GameController {
 
     this.#game.startGame(playerChoice)
     this.#game.deternimateWinner()
+
+    this.#view.showResult()
   }
 }
 

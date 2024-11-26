@@ -12,7 +12,7 @@ class GameView {
   }
 
   showResult() {
-    
+
   }
 }
 
