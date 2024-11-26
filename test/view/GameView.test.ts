@@ -19,4 +19,12 @@ describe('GameView Under Test', () => {
 
     expect(spy).toHaveBeenCalledWith('Welcome To Rock, Paper, Scissor Game. Choose what gesture you want to use')
   })
+
+  test('should promt all different gestures', () => {
+    sut.chooseHand()
+
+    expect(spy).toHaveBeenCalledWith('ROCK')
+    expect(spy).toHaveBeenCalledWith('PAPER')
+    expect(spy).toHaveBeenCalledWith('SCISSOR')
+  })
 })
