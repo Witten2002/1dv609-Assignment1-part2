@@ -1,10 +1,10 @@
 class GameView {
   #clearConsole() {
-    console.clear()
+
   }
 
   startGameMessage() {
-
+    
   }
 
   chooseHand() {
