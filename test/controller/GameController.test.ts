@@ -39,6 +39,10 @@ describe('GameController Under Test', () => {
     sut = new GameController(view, game)
   })
 
+  afterEach(() => {
+    jest.clearAllMocks()
+  })
+
   test('Should initzalize a view', () => {
     expect(sut).toBeDefined()
   })
@@ -112,6 +116,17 @@ describe('GameController Under Test', () => {
     sut.start()
 
     expect(spy).toHaveBeenCalledTimes(2)
+
+    expect(view.askRestart).toHaveBeenCalled()
+  })
+
+  test('Should not call the method start on gameController when user want to quit', () => {
+    view.askRestart = jest.fn().mockReturnValueOnce(Menu.QUIT)
+    const spy = jest.spyOn(sut, 'start')
+
+    sut.start()
+
+    expect(spy).toHaveBeenCalledTimes(1)
 
     expect(view.askRestart).toHaveBeenCalled()
   })
