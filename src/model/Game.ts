@@ -1,16 +1,17 @@
 import { Player } from './Player.js'
 import { ComputerPlayer } from './ComputerPlayer.js'
 import { GameResult } from './enums/GameResult.js'
-import { HandGestureFactory } from './Factory/HandGuestureFactory.js'
 import { UserChoice } from './enums/UserChoice.js'
+import { HandGestureFactory } from './Factory/HandGuestureFactory.js'
 
 class Game {
   #player: Player
   #computerPlayer: ComputerPlayer
 
-  constructor(player: Player, computerPlayer: ComputerPlayer) {
-    this.#player = player
-    this.#computerPlayer = computerPlayer
+  constructor() {
+    const handGestureFactory = new HandGestureFactory()
+    this.#player = new Player('Player 1', handGestureFactory)
+    this.#computerPlayer = new ComputerPlayer(handGestureFactory)
   }
 
   startGame(playerChoice: UserChoice) {

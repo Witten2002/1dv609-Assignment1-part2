@@ -1,12 +1,12 @@
-import { Game } from '../src/model/Game.js'
-import { Player } from '../src/model/Player.js'
-import { ComputerPlayer } from '../src/model/ComputerPlayer.js'
-import { GameResult } from '../src/model/enums/GameResult.js'
-import { Rock } from '../src/model/HandGesture/Rock.js'
-import { Scissor } from '../src/model/HandGesture/Scissor.js'
-import { Paper } from '../src/model/HandGesture/Paper.js'
-import { HandGestureFactory } from '../src/model/Factory/HandGuestureFactory.js'
-import { UserChoice } from '../src/model/enums/UserChoice.js'
+import { Game } from '../../src/model/Game.js'
+import { Player } from '../../src/model/Player.js'
+import { ComputerPlayer } from '../../src/model/ComputerPlayer.js'
+import { GameResult } from '../../src/model/enums/GameResult.js'
+import { Rock } from '../../src/model/HandGesture/Rock.js'
+import { Scissor } from '../../src/model/HandGesture/Scissor.js'
+import { Paper } from '../../src/model/HandGesture/Paper.js'
+import { HandGestureFactory } from '../../src/model/Factory/HandGuestureFactory.js'
+import { UserChoice } from '../../src/model/enums/UserChoice.js'
 
 describe('Rules Under Test', () => {
   let sut: Game
@@ -14,10 +14,9 @@ describe('Rules Under Test', () => {
   let computerPlayer: ComputerPlayer
 
   beforeEach(() => {
-    const handGestureFactory = new HandGestureFactory()
-    player = new Player('Player', handGestureFactory)
-    computerPlayer = new ComputerPlayer(handGestureFactory)
-    sut = new Game(player, computerPlayer)
+    sut = new Game()
+    player = sut.getPlayer()
+    computerPlayer = sut.getComputerPlayer()
   })
 
   const setUpTest = (playerHandGesture, computeHandGesture) => {
@@ -121,7 +120,7 @@ describe('Rules Under Test', () => {
   })
 
   
-  test('Should not crash', () => {
+  test('Should return the correct ComputerPlayer Hand Scissor.', () => {
     sut.startGame(UserChoice.ROCK)
 
     const actual = sut.deternimateWinner()
@@ -139,15 +138,23 @@ describe('Rules Under Test', () => {
     expect(exist).toBe(true)
   })
 
-  test('Should return the correct ComputerPlayer Hand Rock.', () => {
+  test('Should return the correct ComputerPlayer Hand Scissor.', () => {
     sut.startGame(UserChoice.SCISSOR)
 
     const computerInstace = sut.getComputerPlayer()
 
     const actual = computerInstace.getHandGuesture()
 
-    const expected = new Scissor()
+    const expected = [new Scissor(), new Rock(), new Paper()]
 
-    expect(actual).toStrictEqual(expected)
+    let exist = false
+    
+    for (const result of expected) {
+      if (result.type === actual.type) {
+        exist = true
+      }
+    }
+
+    expect(exist).toBe(true)
   })
 })

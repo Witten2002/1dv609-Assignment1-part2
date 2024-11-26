@@ -1,11 +1,11 @@
-import { Player } from '../src/model/Player.js'
-import { Rock } from '../src/model/HandGesture/Rock.js'
-import { Paper } from '../src/model/HandGesture/Paper.js'
-import { Scissor } from '../src/model/HandGesture/Scissor.js'
-import { UserChoice } from '../src/model/enums/UserChoice.js'
-import { HandGestureFactory } from '../src/model/Factory/HandGuestureFactory.js'
+import { Player } from '../../src/model/Player.js'
+import { Rock } from '../../src/model/HandGesture/Rock.js'
+import { Paper } from '../../src/model/HandGesture/Paper.js'
+import { Scissor } from '../../src/model/HandGesture/Scissor.js'
+import { UserChoice } from '../../src/model/enums/UserChoice.js'
+import { HandGestureFactory } from '../../src/model/Factory/HandGuestureFactory.js'
 
-jest.mock('../src/model/Factory/HandGuestureFactory', () => {
+jest.mock('../../src/model/Factory/HandGuestureFactory', () => {
   return {
     HandGestureFactory: jest.fn().mockImplementation(function () {
       this.createHandGuesture = jest.fn()

@@ -1,13 +1,13 @@
-import { Rules } from '../src/model/Rules.js'
-import { UserChoice } from '../src/model/enums/UserChoice.js'
-import { Scissor } from '../src/model/HandGesture/Scissor.js'
-import { Rock } from '../src/model/HandGesture/Rock.js'
-import { Paper } from '../src/model/HandGesture/Paper.js'
-import { Player } from '../src/model/Player.js'
-import { ComputerPlayer } from '../src/model/ComputerPlayer.js'
-import { HandGestureFactory } from '../src/model/Factory/HandGuestureFactory.js'
+import { Rules } from '../../src/model/Rules.js'
+import { UserChoice } from '../../src/model/enums/UserChoice.js'
+import { Scissor } from '../../src/model/HandGesture/Scissor.js'
+import { Rock } from '../../src/model/HandGesture/Rock.js'
+import { Paper } from '../../src/model/HandGesture/Paper.js'
+import { Player } from '../../src/model/Player.js'
+import { ComputerPlayer } from '../../src/model/ComputerPlayer.js'
+import { HandGestureFactory } from '../../src/model/Factory/HandGuestureFactory.js'
 
-jest.mock('../src/model/HandGesture/Rock', () => {
+jest.mock('../../src/model/HandGesture/Rock', () => {
   return {
     Rock: jest.fn().mockImplementation(function () {
       this.type = UserChoice.ROCK
@@ -15,7 +15,7 @@ jest.mock('../src/model/HandGesture/Rock', () => {
   }
 })
 
-jest.mock('../src/model/HandGesture/Paper', () => {
+jest.mock('../../src/model/HandGesture/Paper', () => {
   return {
     Paper: jest.fn().mockImplementation(function () {
       this.type = UserChoice.PAPER
@@ -23,7 +23,7 @@ jest.mock('../src/model/HandGesture/Paper', () => {
   }
 })
 
-jest.mock('../src/model/HandGesture/Scissor', () => {
+jest.mock('../../src/model/HandGesture/Scissor', () => {
   return {
     Scissor: jest.fn().mockImplementation(function () {
       this.type = UserChoice.SCISSOR
@@ -31,7 +31,7 @@ jest.mock('../src/model/HandGesture/Scissor', () => {
   }
 })
 
-jest.mock('../src/model/Player.ts', () => {
+jest.mock('../../src/model/Player.ts', () => {
   return {
     Player: jest.fn().mockImplementation(function (name: string) {
       this.name = name
@@ -41,7 +41,7 @@ jest.mock('../src/model/Player.ts', () => {
   }
 })
 
-jest.mock('../src/model/ComputerPlayer.ts', () => {
+jest.mock('../../src/model/ComputerPlayer.ts', () => {
   return {
     ComputerPlayer: jest.fn().mockImplementation(function () {
       Player.call(this, 'ComputerPlayer')
@@ -50,7 +50,7 @@ jest.mock('../src/model/ComputerPlayer.ts', () => {
   }
 })
 
-jest.mock('../src/model/Factory/HandGuestureFactory', () => {
+jest.mock('../../src/model/Factory/HandGuestureFactory', () => {
   return {
     HandGestureFactory: jest.fn().mockImplementation(function () {
       this.createHandGuesture = jest.fn()
