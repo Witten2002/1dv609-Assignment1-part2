@@ -45,9 +45,11 @@ class GameView {
   showResult(gameResult: GameResult, player: Player, computer: ComputerPlayer) {
     if (gameResult === GameResult.PLAYER) {
       console.log('Player Wins!')
+    } else if (gameResult === GameResult.COMPUTER) {
+      console.log('Computer Wins!')
+    } else {
+      console.log('Its a TIE!')
     }
-    
-    console.log('Computer Wins!')
   }
 
   askRestart() {
