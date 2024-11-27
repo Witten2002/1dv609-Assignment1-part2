@@ -1,9 +1,10 @@
 import { Menu } from '../model/enums/Menu.js'
-import { UserChoice } from '../model/enums/UserChoice.js'
 import { Game } from '../model/Game.js'
 import { GameView } from '../view/GameView.js'
-import { ReadLineAdapter } from '../adapters/ReadLineAdapter.js'
 
+/**
+ * GameController for the Rock Paper Scissor Game.
+ */
 class GameController {
   #view
   #game
@@ -13,6 +14,12 @@ class GameController {
     this.#game = game
   }
 
+  /**
+   * Asks the user to choose a hand gesture.
+   * Start a new game with the choosen gesture.
+   * Write out the winner and the hands.
+   * Asks if the user want to play again or quit.
+   */
   async start() {
     let menuLoop = true
     let playerChoice
@@ -35,8 +42,6 @@ class GameController {
       
       do {
         userWants = await this.#view.askRestart()
-
-        console.log(userWants)
   
         if (userWants === Menu.QUIT) {
   

@@ -14,6 +14,11 @@ class Game {
     this.#computerPlayer = new ComputerPlayer(handGestureFactory)
   }
 
+  /**
+   * Sets the handgestures to both the player and computer.
+   * 
+   * @param playerChoice The players choosen hand gesture.
+   */
   startGame(playerChoice: UserChoice) {
     this.#player.setHandGuesture(playerChoice)
     this.#computerPlayer.generateRandomHandGesture()

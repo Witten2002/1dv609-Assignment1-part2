@@ -29,6 +29,11 @@ class Player {
     return this.#name
   }
 
+  /**
+   * Will create a correct instace of the hand gesture.
+   * 
+   * @param userChoice The choosen hand gesture.
+   */
   setHandGuesture(userChoice: UserChoice) {
     this.#handGuesutre = this.#factory.createHandGuesture(userChoice)
   }
