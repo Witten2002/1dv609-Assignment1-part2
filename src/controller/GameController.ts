@@ -14,27 +14,37 @@ class GameController {
   }
 
   async start() {
-    let userWants = Menu.QUIT
+    let menuLoop = true
+    let playerChoice
+    let userWants
 
-    this.#view.startGameMessage()
-    const playerChoice = await this.#view.chooseHand()
+    while (menuLoop) {
+      do {
+        this.#view.startGameMessage()
+        playerChoice = await this.#view.chooseHand()
+      } while (!playerChoice)
+  
+      this.#game.startGame(playerChoice)
+      const result = this.#game.deternimateWinner()
+  
+      const player = this.#game.getPlayer()
+      const computer = this.#game.getComputerPlayer()
+  
+      this.#view.showResult(result, player, computer)
+  
+      
+      do {
+        userWants = await this.#view.askRestart()
 
-    this.#game.startGame(playerChoice)
-    const result = this.#game.deternimateWinner()
-
-    const player = this.#game.getPlayer()
-    const computer = this.#game.getComputerPlayer()
-
-    this.#view.showResult(result, player, computer)
-
-    userWants = await this.#view.askRestart()
-
-    if (userWants === Menu.RESTART) {
-      console.log('RESTART')
-      this.start()
-    } else if (userWants === Menu.QUIT) {
-      this.#view.exitGame()
-      return 
+        console.log(userWants)
+  
+        if (userWants === Menu.QUIT) {
+  
+          this.#view.exitGame()
+  
+          menuLoop = false
+        }
+      } while (!userWants)
     }
   }
 }

@@ -6,6 +6,8 @@ import { Player } from '../../src/model/Player'
 import { ComputerPlayer } from '../../src/model/ComputerPlayer'
 import { GameResult } from '../../src/model/enums/GameResult'
 import { Menu } from '../../src/model/enums/Menu'
+import { Rock } from '../../src/model/HandGesture/Rock'
+import { Scissor } from '../../src/model/HandGesture/Scissor'
 
 jest.mock('../../src/adapters/ReadLineAdapter', () => {
   return {
@@ -112,6 +114,9 @@ describe('GameView Under Test', () => {
     setUpResultTest()
     player.setHandGuesture(UserChoice.ROCK)
     computer.setHandGuesture(UserChoice.SCISSOR)
+    
+    player.getHandGuesture = jest.fn().mockReturnValue(new Rock())
+    computer.getHandGuesture = jest.fn().mockReturnValue(new Scissor())
 
     const gameResult = GameResult.PLAYER
 
@@ -127,6 +132,9 @@ describe('GameView Under Test', () => {
     player.setHandGuesture(UserChoice.SCISSOR)
     computer.setHandGuesture(UserChoice.ROCK)
 
+    player.getHandGuesture = jest.fn().mockReturnValue(new Scissor())
+    computer.getHandGuesture = jest.fn().mockReturnValue(new Rock())
+
     const gameResult = GameResult.COMPUTER
 
     sut.showResult(gameResult, player, computer)
@@ -140,6 +148,9 @@ describe('GameView Under Test', () => {
     setUpResultTest()
     player.setHandGuesture(UserChoice.SCISSOR)
     computer.setHandGuesture(UserChoice.SCISSOR)
+    
+    player.getHandGuesture = jest.fn().mockReturnValue(new Scissor())
+    computer.getHandGuesture = jest.fn().mockReturnValue(new Scissor())
 
     const gameResult = GameResult.TIE
 
@@ -155,7 +166,8 @@ describe('GameView Under Test', () => {
     player.setHandGuesture(UserChoice.ROCK)
     computer.setHandGuesture(UserChoice.SCISSOR)
 
-    player.getHandGuesture = jest.fn().mockReturnValue(UserChoice.ROCK)
+    player.getHandGuesture = jest.fn().mockReturnValue(new Rock())
+    computer.getHandGuesture = jest.fn().mockReturnValue(new Scissor())
 
     const gameResult = GameResult.PLAYER
 
@@ -171,8 +183,8 @@ describe('GameView Under Test', () => {
     player.setHandGuesture(UserChoice.ROCK)
     computer.setHandGuesture(UserChoice.SCISSOR)
 
-    player.getHandGuesture = jest.fn().mockReturnValue(UserChoice.ROCK)
-    computer.getHandGuesture = jest.fn().mockReturnValue(UserChoice.SCISSOR)
+    player.getHandGuesture = jest.fn().mockReturnValue(new Rock())
+    computer.getHandGuesture = jest.fn().mockReturnValue(new Scissor())
 
     const gameResult = GameResult.PLAYER
 

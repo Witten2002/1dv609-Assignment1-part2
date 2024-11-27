@@ -45,7 +45,7 @@ describe('GameController Under Test', () => {
   let game: Game
   let rl: ReadLineAdapter
 
-  beforeAll(() => {
+  beforeEach(() => {
     rl = new ReadLineAdapter()
     view = new GameView(rl)
     game = new Game()
@@ -62,6 +62,9 @@ describe('GameController Under Test', () => {
   })
 
   test('Should call startGameMessage on view when initzialized', async () => {
+    view.chooseHand = jest.fn().mockReturnValue(UserChoice.ROCK)
+    view.askRestart = jest.fn().mockReturnValueOnce(Menu.QUIT)
+    
     const spy = jest.spyOn(view, 'startGameMessage')
 
     await sut.start()
@@ -72,6 +75,9 @@ describe('GameController Under Test', () => {
   })
 
   test('Should call the method chooseHand on view when initzialized', async () => {
+    view.chooseHand = jest.fn().mockReturnValue(UserChoice.ROCK)
+    view.askRestart = jest.fn().mockReturnValueOnce(Menu.QUIT)
+    
     const spy = jest.spyOn(view, 'chooseHand')
 
     await sut.start()
@@ -83,6 +89,9 @@ describe('GameController Under Test', () => {
 
   
   test('Should call the method startGame on Game with correct arguments', async () => {
+    view.chooseHand = jest.fn().mockReturnValue(UserChoice.ROCK)
+    view.askRestart = jest.fn().mockReturnValueOnce(Menu.QUIT)
+    
     const spy = jest.spyOn(game, 'startGame')
 
     await sut.start()
@@ -93,6 +102,9 @@ describe('GameController Under Test', () => {
   })
 
   test('Should call the method getPlayer on Game ', async () => {
+    view.chooseHand = jest.fn().mockReturnValue(UserChoice.ROCK)
+    view.askRestart = jest.fn().mockReturnValueOnce(Menu.QUIT)
+    
     const spy = jest.spyOn(game, 'getPlayer')
 
     await sut.start()
@@ -103,6 +115,9 @@ describe('GameController Under Test', () => {
   })
 
   test('Should call the method getComputerPlayer on Game ', async () => {
+    view.chooseHand = jest.fn().mockReturnValue(UserChoice.ROCK)
+    view.askRestart = jest.fn().mockReturnValueOnce(Menu.QUIT)
+    
     const spy = jest.spyOn(game, 'getComputerPlayer')
 
     await sut.start()
@@ -113,6 +128,9 @@ describe('GameController Under Test', () => {
   })  
 
   test('Should call the method determinateWinner on Game', async () => {
+    view.chooseHand = jest.fn().mockReturnValue(UserChoice.ROCK)
+    view.askRestart = jest.fn().mockReturnValueOnce(Menu.QUIT)
+    
     const spy = jest.spyOn(game, 'deternimateWinner')
 
     await sut.start()
@@ -123,6 +141,9 @@ describe('GameController Under Test', () => {
   })
 
   test('Should call the method showResult on view', async () => {
+    view.chooseHand = jest.fn().mockReturnValue(UserChoice.ROCK)
+    view.askRestart = jest.fn().mockReturnValueOnce(Menu.QUIT)
+    
     const spy = jest.spyOn(view, 'showResult')
 
     await sut.start()
@@ -134,6 +155,9 @@ describe('GameController Under Test', () => {
 
   
   test('Should call the method askRestart on view', async () => {
+    view.chooseHand = jest.fn().mockReturnValue(UserChoice.ROCK)
+    view.askRestart = jest.fn().mockReturnValueOnce(Menu.QUIT)
+
     const spy = jest.spyOn(view, 'askRestart')
 
     await sut.start()
@@ -144,17 +168,19 @@ describe('GameController Under Test', () => {
   })
 
   test('Should call the method start on gameController when user want to restart', async () => {
-    view.askRestart = jest.fn().mockReturnValueOnce(Menu.RESTART)
+    view.chooseHand = jest.fn().mockReturnValue(UserChoice.ROCK)
+    view.askRestart = jest.fn().mockReturnValueOnce(Menu.RESTART).mockReturnValueOnce(Menu.QUIT)
     const spy = jest.spyOn(sut, 'start')
 
     await sut.start()
 
-    expect(spy).toHaveBeenCalledTimes(2)
+    expect(spy).toHaveBeenCalledTimes(1)
 
     expect(view.askRestart).toHaveBeenCalled()
   })
 
   test('Should not call the method start on gameController when user want to quit', async () => {
+    view.chooseHand = jest.fn().mockReturnValue(UserChoice.ROCK)
     view.askRestart = jest.fn().mockReturnValueOnce(Menu.QUIT)
     const spy = jest.spyOn(sut, 'start')
 

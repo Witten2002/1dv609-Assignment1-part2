@@ -57,11 +57,12 @@ class GameView {
       console.log('Its a TIE!')
     }
 
-    console.log(`Player: ${playerHand}`)
-    console.log(`Computer: ${computerHand}`)
+    console.log(`Player: ${playerHand.type}`)
+    console.log(`Computer: ${computerHand.type}`)
   }
 
   async askRestart() {
+    console.log()
     console.log('Do you want to player again or quit?')
     console.log('1. Play again!')
     console.log('0. Exit')

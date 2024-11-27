@@ -5,7 +5,7 @@ class ReadLineAdapter {
   #rl
   
   constructor() {
-    this.#createInterface
+    this.#createInterface()
   }
 
   #createInterface() {
@@ -14,7 +14,7 @@ class ReadLineAdapter {
 
   async getUserInput() {
     if (!this.#rl) {
-      this.#createInterface
+      this.#createInterface()
     }
 
     const answer = await this.#rl.question('Enter a value: ')

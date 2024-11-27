@@ -1,32 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1732729739611" clover="3.2.0">
-  <project timestamp="1732729739611" name="All files">
-    <metrics statements="145" coveredstatements="143" conditionals="31" coveredconditionals="31" methods="32" coveredmethods="31" elements="208" coveredelements="205" complexity="0" loc="145" ncloc="145" packages="6" files="13" classes="13"/>
+<coverage generated="1732733848727" clover="3.2.0">
+  <project timestamp="1732733848727" name="All files">
+    <metrics statements="147" coveredstatements="145" conditionals="29" coveredconditionals="29" methods="32" coveredmethods="31" elements="208" coveredelements="205" complexity="0" loc="147" ncloc="147" packages="6" files="13" classes="13"/>
     <package name="controller">
-      <metrics statements="21" coveredstatements="21" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+      <metrics statements="22" coveredstatements="22" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
       <file name="GameController.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\controller\GameController.ts">
-        <metrics statements="21" coveredstatements="21" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <metrics statements="22" coveredstatements="22" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="17" count="11" type="stmt"/>
-        <line num="19" count="11" type="stmt"/>
-        <line num="20" count="11" type="stmt"/>
+        <line num="8" count="11" type="stmt"/>
+        <line num="9" count="11" type="stmt"/>
+        <line num="12" count="11" type="stmt"/>
+        <line num="13" count="11" type="stmt"/>
+        <line num="17" count="10" type="stmt"/>
+        <line num="21" count="10" type="stmt"/>
         <line num="22" count="11" type="stmt"/>
         <line num="23" count="11" type="stmt"/>
-        <line num="25" count="11" type="stmt"/>
-        <line num="26" count="11" type="stmt"/>
+        <line num="24" count="11" type="stmt"/>
+        <line num="27" count="11" type="stmt"/>
         <line num="28" count="11" type="stmt"/>
         <line num="30" count="11" type="stmt"/>
-        <line num="32" count="11" type="cond" truecount="2" falsecount="0"/>
-        <line num="33" count="1" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
-        <line num="35" count="10" type="cond" truecount="1" falsecount="0"/>
-        <line num="36" count="1" type="stmt"/>
-        <line num="37" count="1" type="stmt"/>
-        <line num="42" count="1" type="stmt"/>
+        <line num="31" count="11" type="stmt"/>
+        <line num="33" count="11" type="stmt"/>
+        <line num="36" count="11" type="stmt"/>
+        <line num="37" count="11" type="stmt"/>
+        <line num="39" count="11" type="stmt"/>
+        <line num="41" count="11" type="cond" truecount="1" falsecount="0"/>
+        <line num="43" count="10" type="stmt"/>
+        <line num="45" count="10" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
       </file>
     </package>
     <package name="model">
@@ -101,8 +102,8 @@
         <line num="4" count="3" type="stmt"/>
         <line num="5" count="3" type="stmt"/>
         <line num="18" count="9" type="cond" truecount="3" falsecount="0"/>
-        <line num="20" count="4" type="stmt"/>
-        <line num="22" count="2" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
         <line num="24" count="3" type="stmt"/>
         <line num="29" count="3" type="stmt"/>
       </file>
@@ -113,7 +114,7 @@
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="6" type="stmt"/>
         <line num="2" count="6" type="stmt"/>
-        <line num="10" count="23" type="stmt"/>
+        <line num="10" count="22" type="stmt"/>
         <line num="19" count="8" type="stmt"/>
         <line num="23" count="6" type="stmt"/>
       </file>
@@ -121,7 +122,7 @@
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="6" type="stmt"/>
         <line num="2" count="6" type="stmt"/>
-        <line num="10" count="26" type="stmt"/>
+        <line num="10" count="31" type="stmt"/>
         <line num="19" count="9" type="stmt"/>
         <line num="23" count="6" type="stmt"/>
       </file>
@@ -129,7 +130,7 @@
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="6" type="stmt"/>
         <line num="2" count="6" type="stmt"/>
-        <line num="9" count="20" type="stmt"/>
+        <line num="9" count="26" type="stmt"/>
         <line num="19" count="8" type="stmt"/>
         <line num="23" count="6" type="stmt"/>
       </file>
@@ -158,9 +159,9 @@
       </file>
     </package>
     <package name="view">
-      <metrics statements="41" coveredstatements="39" conditionals="12" coveredconditionals="12" methods="6" coveredmethods="5"/>
+      <metrics statements="42" coveredstatements="40" conditionals="12" coveredconditionals="12" methods="6" coveredmethods="5"/>
       <file name="GameView.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\view\GameView.ts">
-        <metrics statements="41" coveredstatements="39" conditionals="12" coveredconditionals="12" methods="6" coveredmethods="5"/>
+        <metrics statements="42" coveredstatements="40" conditionals="12" coveredconditionals="12" methods="6" coveredmethods="5"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
@@ -194,14 +195,15 @@
         <line num="65" count="3" type="stmt"/>
         <line num="66" count="3" type="stmt"/>
         <line num="67" count="3" type="stmt"/>
-        <line num="69" count="3" type="stmt"/>
-        <line num="71" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="72" count="1" type="stmt"/>
-        <line num="73" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="74" count="1" type="stmt"/>
-        <line num="79" count="0" type="stmt"/>
-        <line num="81" count="0" type="stmt"/>
-        <line num="85" count="1" type="stmt"/>
+        <line num="68" count="3" type="stmt"/>
+        <line num="70" count="3" type="stmt"/>
+        <line num="72" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="73" count="1" type="stmt"/>
+        <line num="74" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="75" count="1" type="stmt"/>
+        <line num="80" count="0" type="stmt"/>
+        <line num="82" count="0" type="stmt"/>
+        <line num="86" count="1" type="stmt"/>
       </file>
     </package>
   </project>
