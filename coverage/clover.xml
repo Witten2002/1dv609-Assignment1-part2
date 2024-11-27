@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1732725659075" clover="3.2.0">
-  <project timestamp="1732725659075" name="All files">
+<coverage generated="1732725897547" clover="3.2.0">
+  <project timestamp="1732725897547" name="All files">
     <metrics statements="125" coveredstatements="125" conditionals="26" coveredconditionals="26" methods="31" coveredmethods="30" elements="182" coveredelements="181" complexity="0" loc="125" ncloc="125" packages="6" files="13" classes="13"/>
     <package name="controller">
       <metrics statements="17" coveredstatements="17" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
@@ -56,10 +56,10 @@
         <line num="31" count="10" type="stmt"/>
         <line num="32" count="10" type="stmt"/>
         <line num="34" count="10" type="cond" truecount="2" falsecount="0"/>
-        <line num="35" count="4" type="stmt"/>
-        <line num="36" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="35" count="3" type="stmt"/>
+        <line num="36" count="7" type="cond" truecount="2" falsecount="0"/>
         <line num="37" count="3" type="stmt"/>
-        <line num="39" count="3" type="stmt"/>
+        <line num="39" count="4" type="stmt"/>
         <line num="44" count="1" type="stmt"/>
       </file>
       <file name="Player.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\Player.ts">
@@ -83,8 +83,8 @@
       <file name="Rules.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\Rules.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="9" type="stmt"/>
-        <line num="5" count="34" type="stmt"/>
-        <line num="11" count="34" type="stmt"/>
+        <line num="5" count="35" type="stmt"/>
+        <line num="11" count="35" type="stmt"/>
         <line num="15" count="9" type="stmt"/>
       </file>
     </package>
@@ -97,9 +97,9 @@
         <line num="4" count="3" type="stmt"/>
         <line num="5" count="3" type="stmt"/>
         <line num="18" count="9" type="cond" truecount="3" falsecount="0"/>
-        <line num="20" count="4" type="stmt"/>
-        <line num="22" count="2" type="stmt"/>
-        <line num="24" count="3" type="stmt"/>
+        <line num="20" count="6" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
         <line num="29" count="3" type="stmt"/>
       </file>
     </package>
@@ -109,7 +109,7 @@
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="6" type="stmt"/>
         <line num="2" count="6" type="stmt"/>
-        <line num="10" count="23" type="stmt"/>
+        <line num="10" count="22" type="stmt"/>
         <line num="19" count="8" type="stmt"/>
         <line num="23" count="6" type="stmt"/>
       </file>
@@ -117,15 +117,15 @@
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="6" type="stmt"/>
         <line num="2" count="6" type="stmt"/>
-        <line num="10" count="26" type="stmt"/>
-        <line num="19" count="9" type="stmt"/>
+        <line num="10" count="28" type="stmt"/>
+        <line num="19" count="10" type="stmt"/>
         <line num="23" count="6" type="stmt"/>
       </file>
       <file name="Scissor.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\HandGesture\Scissor.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="6" type="stmt"/>
         <line num="2" count="6" type="stmt"/>
-        <line num="9" count="20" type="stmt"/>
+        <line num="9" count="19" type="stmt"/>
         <line num="19" count="8" type="stmt"/>
         <line num="23" count="6" type="stmt"/>
       </file>
@@ -176,8 +176,8 @@
         <line num="39" count="1" type="stmt"/>
         <line num="40" count="2" type="cond" truecount="1" falsecount="0"/>
         <line num="41" count="1" type="stmt"/>
-        <line num="46" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="47" count="1" type="stmt"/>
+        <line num="46" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="47" count="2" type="stmt"/>
         <line num="48" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="49" count="1" type="stmt"/>
         <line num="51" count="1" type="stmt"/>

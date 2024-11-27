@@ -148,4 +148,18 @@ describe('GameView Under Test', () => {
 
     expect(spy).toHaveBeenCalledWith('Its a TIE!')
   })
+
+  test('Should print out Player hand', () => {
+    setUpResultTest()
+    player.setHandGuesture(UserChoice.ROCK)
+    computer.setHandGuesture(UserChoice.SCISSOR)
+
+    const gameResult = GameResult.PLAYER
+
+    sut.showResult(gameResult, player, computer)
+    
+    expect(spy).toHaveBeenCalled()
+
+    expect(spy).toHaveBeenCalledWith('Player: ROCK')
+  })
 })
