@@ -2,6 +2,7 @@ import { Menu } from '../model/enums/Menu.js'
 import { UserChoice } from '../model/enums/UserChoice.js'
 import { Game } from '../model/Game.js'
 import { GameView } from '../view/GameView.js'
+import { ReadLineAdapter } from '../adapters/ReadLineAdapter.js'
 
 class GameController {
   #view
@@ -10,7 +11,19 @@ class GameController {
   constructor( view: GameView, game: Game) {
     this.#view = view
     this.#game = game
+
+    // this.createView()
+    // this.createGame()
   }
+
+  // createView() {
+  //   const readLineAdapter = new ReadLineAdapter
+  //   this.#view = new GameView(readLineAdapter)
+  // }
+
+  // createGame() {
+  //   this.#game = new Game()
+  // }
 
   async start() {
     let userWants = Menu.QUIT

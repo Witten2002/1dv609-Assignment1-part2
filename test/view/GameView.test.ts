@@ -1,14 +1,10 @@
-import { Game } from '../../src/model/Game'
 import { GameView } from '../../src/view/GameView'
-import * as readline from 'readline';
+import { ReadLineAdapter } from '../../src/adapters/ReadLineAdapter'
 
-jest.mock('readline', () => {
+jest.mock('../../src/adapters/ReadLineAdapter', () => {
   return {
-    createInterface: jest.fn().mockImplementation(() => {
-      return {
-        question: jest.fn(),
-        close: jest.fn()
-      }
+    ReadLineAdapter: jest.fn().mockImplementation(function () {
+      this.getUserInput = jest.fn()
     })
   }
 })
@@ -16,10 +12,11 @@ jest.mock('readline', () => {
 describe('GameView Under Test', () => {
   let sut: GameView
   let spy
-  let rl: readline.Interface
+  let rl: ReadLineAdapter
 
   beforeAll(() => {
-    sut = new GameView()
+    rl = new ReadLineAdapter()
+    sut = new GameView(rl)
     spy = jest.spyOn(console, 'log')
   })
 
@@ -34,14 +31,8 @@ describe('GameView Under Test', () => {
   })
 
   test('should promt all different gestures', async() => {
-    await sut.chooseHand()
+    rl.getUserInput = jest.fn().mockResolvedValue('Rock')
 
-    expect(spy).toHaveBeenCalledWith('1. ROCK')
-    expect(spy).toHaveBeenCalledWith('2. PAPER')
-    expect(spy).toHaveBeenCalledWith('3. SCISSOR')
-  })
-
-  test('should promt all different gestures', async() => {
     await sut.chooseHand()
 
     expect(spy).toHaveBeenCalledWith('1. ROCK')

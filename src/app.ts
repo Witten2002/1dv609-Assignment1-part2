@@ -7,7 +7,7 @@ import { Rock } from "./model/HandGesture/Rock.js";
 import { Scissor } from "./model/HandGesture/Scissor.js";
 import { Player } from "./model/Player.js";
 import { Rules } from './model/Rules.js'
-import { ReadLineAdapter } from './view/ReadLineAdapter.js'
+import { ReadLineAdapter } from './adapters/ReadLineAdapter.js'
 
 
 // const paper = new Paper()

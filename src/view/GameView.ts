@@ -1,10 +1,11 @@
-import { ReadLine } from 'readline'
 import { UserChoice } from '../model/enums/UserChoice.js'
+import { ReadLineAdapter } from '../adapters/ReadLineAdapter.js'
 
 class GameView {
-  constructor(readline: ReadLine) {
-    // skapa en adapter för readLine
-    // I testerna ska jag sedan mocka den för att kunna fippla med den.
+  #rl
+
+  constructor(readline: ReadLineAdapter) {
+    this.#rl = readline
   }
 
   #clearConsole() {
@@ -27,8 +28,7 @@ class GameView {
       console.log(`${index}. ${gestures[i]}`)
     }
 
-    // standard value if user dont enter a value
-    const [,, answer = 'Rock' ] = process.argv
+    const answer = await this.#rl.getUserInput()
     
     if (answer === 'Rock') {
       return UserChoice.ROCK

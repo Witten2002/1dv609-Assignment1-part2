@@ -3,6 +3,7 @@ import { UserChoice } from '../../src/model/enums/UserChoice'
 import { GameView } from '../../src/view/GameView'
 import { Game } from '../../src/model/Game'
 import { Menu } from '../../src/model/enums/Menu'
+import { ReadLineAdapter } from '../../src/adapters/ReadLineAdapter'
 
 
 jest.mock('../../src/view/GameView', () => {
@@ -28,15 +29,26 @@ jest.mock('../../src/model/Game', () => {
   }
 })
 
+jest.mock('../../src/adapters/ReadLineAdapter', () => {
+  return {
+    ReadLineAdapter: jest.fn().mockImplementation(function () {
+      this.getUserInput = jest.fn()
+    })
+  }
+})
+
 describe('GameController Under Test', () => {
   let view: GameView
   let sut: GameController
   let game: Game
+  let rl: ReadLineAdapter
 
   beforeAll(() => {
-    view = new GameView()
+    rl = new ReadLineAdapter()
+    view = new GameView(rl)
     game = new Game()
     sut = new GameController(view, game)
+    rl.getUserInput = jest.fn().mockResolvedValue('Rock')
   })
 
   afterEach(() => {
@@ -47,10 +59,10 @@ describe('GameController Under Test', () => {
     expect(sut).toBeDefined()
   })
 
-  test('Should call startGameMessage on view when initzialized', () => {
+  test('Should call startGameMessage on view when initzialized', async () => {
     const spy = jest.spyOn(view, 'startGameMessage')
 
-    sut.start()
+    await sut.start()
 
     expect(spy).toHaveBeenCalled()
 
