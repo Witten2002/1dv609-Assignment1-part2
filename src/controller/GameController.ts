@@ -12,7 +12,7 @@ class GameController {
     this.#game = game
   }
 
-  start() {
+  async start() {
     let userWants = Menu.QUIT
 
     this.#view.startGameMessage()

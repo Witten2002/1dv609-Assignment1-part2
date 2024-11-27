@@ -7,29 +7,46 @@ import { Rock } from "./model/HandGesture/Rock.js";
 import { Scissor } from "./model/HandGesture/Scissor.js";
 import { Player } from "./model/Player.js";
 import { Rules } from './model/Rules.js'
+import { ReadLineAdapter } from './view/ReadLineAdapter.js'
 
 
-const paper = new Paper()
-const rock = new Rock()
-const scissor = new Scissor()
+// const paper = new Paper()
+// const rock = new Rock()
+// const scissor = new Scissor()
 
-const rules = new Rules () 
+// const rules = new Rules () 
 
-// const result = rock.beats(scissor)
+// // const result = rock.beats(scissor)
 
-const handGestureFactory = new HandGestureFactory()
+// const handGestureFactory = new HandGestureFactory()
 
-const player = new Player('Player', handGestureFactory)
-const computer = new ComputerPlayer(handGestureFactory)
-const game = new Game(player, computer)
-// const player = new Player('player 1', new HandGestureFactory())
-// const computer = new ComputerPlayer(new HandGestureFactory())
+// const player = new Player('Player', handGestureFactory)
+// const computer = new ComputerPlayer(handGestureFactory)
+// const game = new Game(player, computer)
+// // const player = new Player('player 1', new HandGestureFactory())
+// // const computer = new ComputerPlayer(new HandGestureFactory())
 
-player.setHandGuesture(UserChoice.ROCK)
-computer.generateRandomHandGesture()
+// player.setHandGuesture(UserChoice.ROCK)
+// computer.generateRandomHandGesture()
 
-console.log(player.getHandGuesture())
+// console.log(player.getHandGuesture())
 
-const result = game.deternimateWinner()
+// const result = game.deternimateWinner()
 
-console.log(result)
+// console.log(result)
+
+// const rl = new ReadLineAdapter()
+
+// const answer = rl.getUserInput()
+
+// console.log(answer)
+
+async function test() {
+  const rl = new ReadLineAdapter()
+
+  const answer = await rl.getUserInput()
+
+  console.log(answer)
+}
+
+test()
