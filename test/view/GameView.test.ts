@@ -164,4 +164,20 @@ describe('GameView Under Test', () => {
 
     expect(spy).toHaveBeenCalledWith('Player: ROCK')
   })
+
+  test('Should print out Computer hand', () => {
+    setUpResultTest()
+    player.setHandGuesture(UserChoice.ROCK)
+    computer.setHandGuesture(UserChoice.SCISSOR)
+
+    player.getHandGuesture = jest.fn().mockReturnValue(UserChoice.ROCK)
+
+    const gameResult = GameResult.PLAYER
+
+    sut.showResult(gameResult, player, computer)
+    
+    expect(spy).toHaveBeenCalled()
+
+    expect(spy).toHaveBeenCalledWith('Computer: Scissor')
+  })
 })
