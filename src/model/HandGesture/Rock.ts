@@ -1,7 +1,6 @@
 import { UserChoice } from '../enums/UserChoice.js'
 import { Rules } from '../Rules.js'
 import { HandGuesture } from './HandGesture.js'
-import { Scissor } from './Scissor.js'
 
 class Rock implements HandGuesture { 
   type: UserChoice

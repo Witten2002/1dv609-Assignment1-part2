@@ -22,6 +22,11 @@ class GameView {
     console.log('Welcome To Rock, Paper, Scissor Game')
   }
 
+  /**
+   * Will propmt the user all different hand gestures to choose from.
+   * 
+   * @returns The choosen hand gesture.
+   */
   async chooseHand() {
     const gestures = Array.from(Object.values(UserChoice))
 
