@@ -13,6 +13,7 @@ jest.mock('../../src/view/GameView', () => {
       this.chooseHand = jest.fn().mockReturnValue(UserChoice.ROCK)
       this.showResult = jest.fn()
       this.askRestart = jest.fn()
+      this.exitGame = jest.fn()
     })
   }
 })
@@ -70,10 +71,10 @@ describe('GameController Under Test', () => {
     expect(view.startGameMessage).toHaveBeenCalled()
   })
 
-  test('Should call the method chooseHand on view when initzialized', () => {
+  test('Should call the method chooseHand on view when initzialized', async () => {
     const spy = jest.spyOn(view, 'chooseHand')
 
-    sut.start()
+    await sut.start()
 
     expect(spy).toHaveBeenCalled()
 
@@ -81,50 +82,50 @@ describe('GameController Under Test', () => {
   })
 
   
-  test('Should call the method startGame on Game with correct arguments', () => {
+  test('Should call the method startGame on Game with correct arguments', async () => {
     const spy = jest.spyOn(game, 'startGame')
 
-    sut.start()
+    await sut.start()
 
     expect(spy).toHaveBeenCalled()
 
     expect(game.startGame).toHaveBeenCalledWith(UserChoice.ROCK)
   })
 
-  test('Should call the method getPlayer on Game ', () => {
+  test('Should call the method getPlayer on Game ', async () => {
     const spy = jest.spyOn(game, 'getPlayer')
 
-    sut.start()
+    await sut.start()
 
     expect(spy).toHaveBeenCalled()
 
     expect(game.getPlayer).toHaveBeenCalled()
   })
 
-  test('Should call the method getComputerPlayer on Game ', () => {
+  test('Should call the method getComputerPlayer on Game ', async () => {
     const spy = jest.spyOn(game, 'getComputerPlayer')
 
-    sut.start()
+    await sut.start()
 
     expect(spy).toHaveBeenCalled()
 
     expect(game.getComputerPlayer).toHaveBeenCalled()
   })  
 
-  test('Should call the method determinateWinner on Game', () => {
+  test('Should call the method determinateWinner on Game', async () => {
     const spy = jest.spyOn(game, 'deternimateWinner')
 
-    sut.start()
+    await sut.start()
 
     expect(spy).toHaveBeenCalled()
 
     expect(game.deternimateWinner).toHaveBeenCalled()
   })
 
-  test('Should call the method showResult on view', () => {
+  test('Should call the method showResult on view', async () => {
     const spy = jest.spyOn(view, 'showResult')
 
-    sut.start()
+    await sut.start()
 
     expect(spy).toHaveBeenCalled()
 
@@ -132,32 +133,32 @@ describe('GameController Under Test', () => {
   })
 
   
-  test('Should call the method askRestart on view', () => {
+  test('Should call the method askRestart on view', async () => {
     const spy = jest.spyOn(view, 'askRestart')
 
-    sut.start()
+    await sut.start()
 
     expect(spy).toHaveBeenCalled()
 
     expect(view.askRestart).toHaveBeenCalled()
   })
 
-  test('Should call the method start on gameController when user want to restart', () => {
+  test('Should call the method start on gameController when user want to restart', async () => {
     view.askRestart = jest.fn().mockReturnValueOnce(Menu.RESTART)
     const spy = jest.spyOn(sut, 'start')
 
-    sut.start()
+    await sut.start()
 
     expect(spy).toHaveBeenCalledTimes(2)
 
     expect(view.askRestart).toHaveBeenCalled()
   })
 
-  test('Should not call the method start on gameController when user want to quit', () => {
+  test('Should not call the method start on gameController when user want to quit', async () => {
     view.askRestart = jest.fn().mockReturnValueOnce(Menu.QUIT)
     const spy = jest.spyOn(sut, 'start')
 
-    sut.start()
+    await sut.start()
 
     expect(spy).toHaveBeenCalledTimes(1)
 

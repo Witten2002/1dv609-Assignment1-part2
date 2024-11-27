@@ -5,15 +5,25 @@ class ReadLineAdapter {
   #rl
   
   constructor() {
+    this.#createInterface
+  }
+
+  #createInterface() {
     this.#rl = readline.createInterface({ input, output})
   }
 
   async getUserInput() {
+    if (!this.#rl) {
+      this.#createInterface
+    }
+
     const answer = await this.#rl.question('Enter a value: ')
 
-    this.#rl.close()
-
     return answer
+  }
+
+  exitGame() {
+    this.#rl.close()
   }
 }
 

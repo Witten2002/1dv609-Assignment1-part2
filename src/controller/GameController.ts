@@ -11,25 +11,13 @@ class GameController {
   constructor( view: GameView, game: Game) {
     this.#view = view
     this.#game = game
-
-    // this.createView()
-    // this.createGame()
   }
-
-  // createView() {
-  //   const readLineAdapter = new ReadLineAdapter
-  //   this.#view = new GameView(readLineAdapter)
-  // }
-
-  // createGame() {
-  //   this.#game = new Game()
-  // }
 
   async start() {
     let userWants = Menu.QUIT
 
     this.#view.startGameMessage()
-    const playerChoice = this.#view.chooseHand()
+    const playerChoice = await this.#view.chooseHand()
 
     this.#game.startGame(playerChoice)
     const result = this.#game.deternimateWinner()
@@ -39,10 +27,14 @@ class GameController {
 
     this.#view.showResult(result, player, computer)
 
-    userWants = this.#view.askRestart()
+    userWants = await this.#view.askRestart()
 
     if (userWants === Menu.RESTART) {
+      console.log('RESTART')
       this.start()
+    } else if (userWants === Menu.QUIT) {
+      this.#view.exitGame()
+      return 
     }
   }
 }

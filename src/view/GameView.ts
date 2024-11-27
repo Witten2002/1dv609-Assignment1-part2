@@ -44,6 +44,8 @@ class GameView {
   }
 
   showResult(gameResult: GameResult, player: Player, computer: ComputerPlayer) {
+    this.#clearConsole()
+
     const playerHand = player.getHandGuesture()
     const computerHand = computer.getHandGuesture()
     
@@ -71,6 +73,12 @@ class GameView {
     } else if (answer === '0') {
       return Menu.QUIT
     }
+  }
+
+  exitGame() {
+    console.log('Good Bye!')
+
+    this.#rl.exitGame()
   }
 }
 
