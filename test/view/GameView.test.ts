@@ -1,6 +1,10 @@
 import { GameView } from '../../src/view/GameView'
 import { ReadLineAdapter } from '../../src/adapters/ReadLineAdapter'
 import { UserChoice } from '../../src/model/enums/UserChoice'
+import { HandGestureFactory } from '../../src/model/Factory/HandGuestureFactory'
+import { Player } from '../../src/model/Player'
+import { ComputerPlayer } from '../../src/model/ComputerPlayer'
+import { GameResult } from '../../src/model/enums/GameResult'
 
 jest.mock('../../src/adapters/ReadLineAdapter', () => {
   return {
@@ -10,10 +14,30 @@ jest.mock('../../src/adapters/ReadLineAdapter', () => {
   }
 })
 
+jest.mock('../../src/model/Player', () => {
+  return {
+    Player: jest.fn().mockImplementation(function () {
+      this.setHandGuesture = jest.fn(),
+      this.getHandGuesture = jest.fn()
+    })
+  }
+})
+
+jest.mock('../../src/model/ComputerPlayer', () => {
+  return {
+    ComputerPlayer: jest.fn().mockImplementation(function () {
+      this.setHandGuesture = jest.fn(),
+      this.getHandGuesture = jest.fn()
+    })
+  }
+})
+
 describe('GameView Under Test', () => {
   let sut: GameView
   let spy
   let rl: ReadLineAdapter
+  let player: Player
+  let computer: ComputerPlayer
 
   beforeAll(() => {
     rl = new ReadLineAdapter()
@@ -77,8 +101,20 @@ describe('GameView Under Test', () => {
     expect(actual).toBe(UserChoice.SCISSOR)
   })
 
+  const setUpResultTest = () => {
+    const handGestureFactory = new HandGestureFactory()
+    player = new Player('Player', handGestureFactory)
+    computer = new ComputerPlayer(handGestureFactory)
+  }
+
   test('Should print out the winner Player', () => {
-    sut.showResult()
+    setUpResultTest()
+    player.setHandGuesture(UserChoice.ROCK)
+    computer.setHandGuesture(UserChoice.SCISSOR)
+
+    const gameResult = GameResult.PLAYER
+
+    sut.showResult(gameResult, player, computer)
 
     expect(spy).toHaveBeenCalled()
 
@@ -86,7 +122,13 @@ describe('GameView Under Test', () => {
   })
 
   test('Should print out the winner Computer', () => {
-    sut.showResult()
+    setUpResultTest()
+    player.setHandGuesture(UserChoice.SCISSOR)
+    computer.setHandGuesture(UserChoice.ROCK)
+
+    const gameResult = GameResult.PLAYER
+
+    sut.showResult(gameResult, player, computer)
     
     expect(spy).toHaveBeenCalled()
 

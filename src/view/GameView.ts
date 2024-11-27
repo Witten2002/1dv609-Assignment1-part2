@@ -1,5 +1,8 @@
 import { UserChoice } from '../model/enums/UserChoice.js'
 import { ReadLineAdapter } from '../adapters/ReadLineAdapter.js'
+import { GameResult } from '../model/enums/GameResult.js'
+import { ComputerPlayer } from '../model/ComputerPlayer.js'
+import { Player } from '../model/Player.js'
 
 class GameView {
   #rl
@@ -39,8 +42,12 @@ class GameView {
     }
   }
 
-  showResult() {
-    console.log('Player Wins!')
+  showResult(gameResult: GameResult, player: Player, computer: ComputerPlayer) {
+    if (gameResult === GameResult.PLAYER) {
+      console.log('Player Wins!')
+    }
+    
+    console.log('Computer Wins!')
   }
 
   askRestart() {
