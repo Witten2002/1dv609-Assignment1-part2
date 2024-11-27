@@ -43,6 +43,8 @@ class GameView {
   }
 
   showResult(gameResult: GameResult, player: Player, computer: ComputerPlayer) {
+    const playerHand = player.getHandGuesture()
+    
     if (gameResult === GameResult.PLAYER) {
       console.log('Player Wins!')
     } else if (gameResult === GameResult.COMPUTER) {
@@ -50,6 +52,8 @@ class GameView {
     } else {
       console.log('Its a TIE!')
     }
+
+    console.log(`Player: ${playerHand}`)
   }
 
   askRestart() {

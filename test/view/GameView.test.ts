@@ -154,6 +154,8 @@ describe('GameView Under Test', () => {
     player.setHandGuesture(UserChoice.ROCK)
     computer.setHandGuesture(UserChoice.SCISSOR)
 
+    player.getHandGuesture = jest.fn().mockReturnValue(UserChoice.ROCK)
+
     const gameResult = GameResult.PLAYER
 
     sut.showResult(gameResult, player, computer)
