@@ -44,6 +44,7 @@ class GameView {
 
   showResult(gameResult: GameResult, player: Player, computer: ComputerPlayer) {
     const playerHand = player.getHandGuesture()
+    const computerHand = computer.getHandGuesture()
     
     if (gameResult === GameResult.PLAYER) {
       console.log('Player Wins!')
@@ -54,6 +55,7 @@ class GameView {
     }
 
     console.log(`Player: ${playerHand}`)
+    console.log(`Computer: ${computerHand}`)
   }
 
   askRestart() {

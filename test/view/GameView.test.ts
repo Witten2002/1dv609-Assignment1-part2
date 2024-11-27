@@ -171,6 +171,7 @@ describe('GameView Under Test', () => {
     computer.setHandGuesture(UserChoice.SCISSOR)
 
     player.getHandGuesture = jest.fn().mockReturnValue(UserChoice.ROCK)
+    computer.getHandGuesture = jest.fn().mockReturnValue(UserChoice.SCISSOR)
 
     const gameResult = GameResult.PLAYER
 
@@ -178,6 +179,6 @@ describe('GameView Under Test', () => {
     
     expect(spy).toHaveBeenCalled()
 
-    expect(spy).toHaveBeenCalledWith('Computer: Scissor')
+    expect(spy).toHaveBeenCalledWith('Computer: SCISSOR')
   })
 })
