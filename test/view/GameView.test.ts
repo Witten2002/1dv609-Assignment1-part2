@@ -200,4 +200,12 @@ describe('GameView Under Test', () => {
 
     expect(actual).toBe(expected)
   })
+
+  test('Should return QUIT when option quit is choosed', async () => {
+    const actual = await sut.askRestart()
+
+    const expected = Menu.QUIT
+
+    expect(actual).toBe(expected)
+  })
 })
