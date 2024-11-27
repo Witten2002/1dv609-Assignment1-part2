@@ -29,12 +29,14 @@ class GameView {
     }
 
     const answer = await this.#rl.getUserInput()
+
+    console.log(typeof answer)
     
-    if (answer === 'Rock') {
+    if (answer === '1') {
       return UserChoice.ROCK
-    } else if (answer === 'Paper') {
+    } else if (answer === '2') {
       return UserChoice.PAPER
-    } else if (answer === 'Scissor') {
+    } else if (answer === '3') {
       return UserChoice.SCISSOR
     }
   }

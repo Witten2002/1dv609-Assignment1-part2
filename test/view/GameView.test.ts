@@ -1,5 +1,6 @@
 import { GameView } from '../../src/view/GameView'
 import { ReadLineAdapter } from '../../src/adapters/ReadLineAdapter'
+import { UserChoice } from '../../src/model/enums/UserChoice'
 
 jest.mock('../../src/adapters/ReadLineAdapter', () => {
   return {
@@ -38,5 +39,17 @@ describe('GameView Under Test', () => {
     expect(spy).toHaveBeenCalledWith('1. ROCK')
     expect(spy).toHaveBeenCalledWith('2. PAPER')
     expect(spy).toHaveBeenCalledWith('3. SCISSOR')
+  })
+
+  test('should return the correct UserChoice', async() => {
+    rl.getUserInput = jest.fn().mockResolvedValue('1')
+
+    const actual = await sut.chooseHand()
+
+    expect(spy).toHaveBeenCalledWith('1. ROCK')
+    expect(spy).toHaveBeenCalledWith('2. PAPER')
+    expect(spy).toHaveBeenCalledWith('3. SCISSOR')
+
+    expect(actual).toBe(UserChoice.ROCK)
   })
 })
