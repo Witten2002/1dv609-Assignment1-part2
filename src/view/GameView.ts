@@ -63,6 +63,8 @@ class GameView {
     console.log('Do you want to player again or quit?')
     console.log('1. Play again!')
     console.log('0. Exit')
+
+    return Menu.RESTART
   }
 }
 
