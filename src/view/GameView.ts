@@ -59,12 +59,18 @@ class GameView {
     console.log(`Computer: ${computerHand}`)
   }
 
-  askRestart() {
+  async askRestart() {
     console.log('Do you want to player again or quit?')
     console.log('1. Play again!')
     console.log('0. Exit')
 
-    return Menu.RESTART
+    const answer = await this.#rl.getUserInput()
+
+    if (answer === '1') {
+      return Menu.RESTART
+    } else if (answer === '0') {
+      return Menu.QUIT
+    }
   }
 }
 

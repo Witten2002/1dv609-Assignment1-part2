@@ -194,6 +194,8 @@ describe('GameView Under Test', () => {
   })
 
   test('Should return RESTART when option play again is choosed', async () => {
+    rl.getUserInput = jest.fn().mockResolvedValue('1')
+
     const actual = await sut.askRestart()
 
     const expected = Menu.RESTART
@@ -202,6 +204,8 @@ describe('GameView Under Test', () => {
   })
 
   test('Should return QUIT when option quit is choosed', async () => {
+    rl.getUserInput = jest.fn().mockResolvedValue('0')
+
     const actual = await sut.askRestart()
 
     const expected = Menu.QUIT
