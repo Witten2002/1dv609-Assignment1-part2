@@ -5,6 +5,7 @@ import { HandGestureFactory } from '../../src/model/Factory/HandGuestureFactory'
 import { Player } from '../../src/model/Player'
 import { ComputerPlayer } from '../../src/model/ComputerPlayer'
 import { GameResult } from '../../src/model/enums/GameResult'
+import { Menu } from '../../src/model/enums/Menu'
 
 jest.mock('../../src/adapters/ReadLineAdapter', () => {
   return {
@@ -182,14 +183,21 @@ describe('GameView Under Test', () => {
     expect(spy).toHaveBeenCalledWith('Computer: SCISSOR')
   })
 
-  test('Should ask the user if he want to play again or quit', () => {
-
-    sut.askRestart()
+  test('Should ask the user if he want to play again or quit', async () => {
+    await sut.askRestart()
 
     expect(spy).toHaveBeenCalled()
 
     expect(spy).toHaveBeenCalledWith('Do you want to player again or quit?')
     expect(spy).toHaveBeenCalledWith('1. Play again!')
     expect(spy).toHaveBeenCalledWith('0. Exit')
+  })
+
+  test('Should return RESTART when option play again is choosed', async () => {
+    const actual = await sut.askRestart()
+
+    const expected = Menu.RESTART
+
+    expect(actual).toBe(expected)
   })
 })

@@ -3,6 +3,7 @@ import { ReadLineAdapter } from '../adapters/ReadLineAdapter.js'
 import { GameResult } from '../model/enums/GameResult.js'
 import { ComputerPlayer } from '../model/ComputerPlayer.js'
 import { Player } from '../model/Player.js'
+import { Menu } from '../model/enums/Menu.js'
 
 class GameView {
   #rl
