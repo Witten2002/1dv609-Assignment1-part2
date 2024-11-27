@@ -64,4 +64,16 @@ describe('GameView Under Test', () => {
 
     expect(actual).toBe(UserChoice.PAPER)
   })
+
+  test('should return the correct UserChoice Scissor', async() => {
+    rl.getUserInput = jest.fn().mockResolvedValue('3')
+
+    const actual = await sut.chooseHand()
+
+    expect(spy).toHaveBeenCalledWith('1. ROCK')
+    expect(spy).toHaveBeenCalledWith('2. PAPER')
+    expect(spy).toHaveBeenCalledWith('3. SCISSOR')
+
+    expect(actual).toBe(UserChoice.SCISSOR)
+  })
 })
