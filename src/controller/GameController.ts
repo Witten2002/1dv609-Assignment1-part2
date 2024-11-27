@@ -32,9 +32,12 @@ class GameController {
     const playerChoice = this.#view.chooseHand()
 
     this.#game.startGame(playerChoice)
-    this.#game.deternimateWinner()
+    const result = this.#game.deternimateWinner()
 
-    this.#view.showResult()
+    const player = this.#game.getPlayer()
+    const computer = this.#game.getComputerPlayer()
+
+    this.#view.showResult(result, player, computer)
 
     userWants = this.#view.askRestart()
 

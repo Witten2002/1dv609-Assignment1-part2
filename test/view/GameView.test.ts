@@ -76,4 +76,10 @@ describe('GameView Under Test', () => {
 
     expect(actual).toBe(UserChoice.SCISSOR)
   })
+
+  test('Should print out the winner Player', () => {
+    expect(spy).toHaveBeenCalled()
+
+    expect(spy).toHaveBeenCalledWith('Player Wins!')
+  })
 })

@@ -29,8 +29,6 @@ class GameView {
     }
 
     const answer = await this.#rl.getUserInput()
-
-    console.log(typeof answer)
     
     if (answer === '1') {
       return UserChoice.ROCK

@@ -22,7 +22,8 @@ jest.mock('../../src/model/Game', () => {
     Game: jest.fn().mockImplementation(() => {
       return {
         startGame: jest.fn(),
-        getPlayerHand: jest.fn(),
+        getPlayer: jest.fn(),
+        getComputerPlayer: jest.fn(),
         deternimateWinner: jest.fn()
       }
     })
@@ -89,6 +90,26 @@ describe('GameController Under Test', () => {
 
     expect(game.startGame).toHaveBeenCalledWith(UserChoice.ROCK)
   })
+
+  test('Should call the method getPlayer on Game ', () => {
+    const spy = jest.spyOn(game, 'getPlayer')
+
+    sut.start()
+
+    expect(spy).toHaveBeenCalled()
+
+    expect(game.getPlayer).toHaveBeenCalled()
+  })
+
+  test('Should call the method getComputerPlayer on Game ', () => {
+    const spy = jest.spyOn(game, 'getComputerPlayer')
+
+    sut.start()
+
+    expect(spy).toHaveBeenCalled()
+
+    expect(game.getComputerPlayer).toHaveBeenCalled()
+  })  
 
   test('Should call the method determinateWinner on Game', () => {
     const spy = jest.spyOn(game, 'deternimateWinner')
