@@ -126,12 +126,26 @@ describe('GameView Under Test', () => {
     player.setHandGuesture(UserChoice.SCISSOR)
     computer.setHandGuesture(UserChoice.ROCK)
 
-    const gameResult = GameResult.PLAYER
+    const gameResult = GameResult.COMPUTER
 
     sut.showResult(gameResult, player, computer)
     
     expect(spy).toHaveBeenCalled()
 
     expect(spy).toHaveBeenCalledWith('Computer Wins!')
+  })
+
+  test('Should print out the Tie', () => {
+    setUpResultTest()
+    player.setHandGuesture(UserChoice.SCISSOR)
+    computer.setHandGuesture(UserChoice.SCISSOR)
+
+    const gameResult = GameResult.TIE
+
+    sut.showResult(gameResult, player, computer)
+    
+    expect(spy).toHaveBeenCalled()
+
+    expect(spy).toHaveBeenCalledWith('Its a TIE!')
   })
 })
