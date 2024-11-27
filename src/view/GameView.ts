@@ -59,7 +59,6 @@ class GameView {
   }
 
   askRestart() {
-    
   }
 }
 

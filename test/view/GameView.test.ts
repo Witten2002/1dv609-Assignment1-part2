@@ -181,4 +181,15 @@ describe('GameView Under Test', () => {
 
     expect(spy).toHaveBeenCalledWith('Computer: SCISSOR')
   })
+
+  test('Should ask the user if he want to play again or quit', () => {
+
+    sut.askRestart()
+
+    expect(spy).toHaveBeenCalled()
+
+    expect(spy).toHaveBeenCalledWith('Do you want to player again or quit?')
+    expect(spy).toHaveBeenCalledWith('1. Play again!')
+    expect(spy).toHaveBeenCalledWith('0. Exit')
+  })
 })
