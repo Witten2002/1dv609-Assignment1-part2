@@ -78,9 +78,9 @@ describe('GameView Under Test', () => {
   })
 
   test('Should print out the winner Player', () => {
-    expect(spy).toHaveBeenCalled()
-    
     sut.showResult()
+    
+    expect(spy).toHaveBeenCalled()
 
     expect(spy).toHaveBeenCalledWith('Player Wins!')
   })

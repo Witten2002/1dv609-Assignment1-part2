@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1732724588018" clover="3.2.0">
-  <project timestamp="1732724588018" name="All files">
-    <metrics statements="119" coveredstatements="119" conditionals="22" coveredconditionals="22" methods="31" coveredmethods="29" elements="172" coveredelements="170" complexity="0" loc="119" ncloc="119" packages="6" files="13" classes="13"/>
+<coverage generated="1732724684021" clover="3.2.0">
+  <project timestamp="1732724684021" name="All files">
+    <metrics statements="120" coveredstatements="120" conditionals="22" coveredconditionals="22" methods="31" coveredmethods="30" elements="173" coveredelements="172" complexity="0" loc="120" ncloc="120" packages="6" files="13" classes="13"/>
     <package name="controller">
       <metrics statements="17" coveredstatements="17" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
       <file name="GameController.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\controller\GameController.ts">
@@ -58,8 +58,8 @@
         <line num="34" count="10" type="cond" truecount="2" falsecount="0"/>
         <line num="35" count="3" type="stmt"/>
         <line num="36" count="7" type="cond" truecount="2" falsecount="0"/>
-        <line num="37" count="4" type="stmt"/>
-        <line num="39" count="3" type="stmt"/>
+        <line num="37" count="3" type="stmt"/>
+        <line num="39" count="4" type="stmt"/>
         <line num="44" count="1" type="stmt"/>
       </file>
       <file name="Player.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\Player.ts">
@@ -97,9 +97,9 @@
         <line num="4" count="2" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
         <line num="18" count="9" type="cond" truecount="3" falsecount="0"/>
-        <line num="20" count="5" type="stmt"/>
-        <line num="22" count="2" type="stmt"/>
-        <line num="24" count="2" type="stmt"/>
+        <line num="20" count="4" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="24" count="4" type="stmt"/>
         <line num="29" count="2" type="stmt"/>
       </file>
     </package>
@@ -109,23 +109,23 @@
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="5" type="stmt"/>
         <line num="2" count="5" type="stmt"/>
-        <line num="10" count="23" type="stmt"/>
-        <line num="19" count="9" type="stmt"/>
+        <line num="10" count="22" type="stmt"/>
+        <line num="19" count="8" type="stmt"/>
         <line num="23" count="5" type="stmt"/>
       </file>
       <file name="Rock.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\HandGesture\Rock.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="5" type="stmt"/>
         <line num="2" count="5" type="stmt"/>
-        <line num="10" count="27" type="stmt"/>
-        <line num="19" count="9" type="stmt"/>
+        <line num="10" count="26" type="stmt"/>
+        <line num="19" count="10" type="stmt"/>
         <line num="23" count="5" type="stmt"/>
       </file>
       <file name="Scissor.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\model\HandGesture\Scissor.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="5" type="stmt"/>
         <line num="2" count="5" type="stmt"/>
-        <line num="9" count="19" type="stmt"/>
+        <line num="9" count="21" type="stmt"/>
         <line num="19" count="8" type="stmt"/>
         <line num="23" count="5" type="stmt"/>
       </file>
@@ -154,9 +154,9 @@
       </file>
     </package>
     <package name="view">
-      <metrics statements="19" coveredstatements="19" conditionals="5" coveredconditionals="5" methods="5" coveredmethods="3"/>
+      <metrics statements="20" coveredstatements="20" conditionals="5" coveredconditionals="5" methods="5" coveredmethods="4"/>
       <file name="GameView.ts" path="C:\Users\Witten\Documents\1dv609\1dv609-Assignment1-part2\src\view\GameView.ts">
-        <metrics statements="19" coveredstatements="19" conditionals="5" coveredconditionals="5" methods="5" coveredmethods="3"/>
+        <metrics statements="20" coveredstatements="20" conditionals="5" coveredconditionals="5" methods="5" coveredmethods="4"/>
         <line num="1" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
@@ -175,6 +175,7 @@
         <line num="36" count="1" type="stmt"/>
         <line num="37" count="2" type="cond" truecount="1" falsecount="0"/>
         <line num="38" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
         <line num="51" count="1" type="stmt"/>
       </file>
     </package>

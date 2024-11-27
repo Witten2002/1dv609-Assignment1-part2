@@ -40,7 +40,7 @@ class GameView {
   }
 
   showResult() {
-
+    console.log('Player Wins!')
   }
 
   askRestart() {
